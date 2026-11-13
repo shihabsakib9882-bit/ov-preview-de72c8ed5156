@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work | Orivane</title>
+<meta name="description" content="Work by Orivane: an invoice tool for a print shop, an exam practice platform, and a portfolio website.">
+<meta name="theme-color" content="#0A0B0D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orivane">
+<meta property="og:title" content="Work | Orivane">
+<meta property="og:description" content="An invoice tool for a print shop, an exam practice platform, and a portfolio website.">
+<meta property="og:image" content="../assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+<style>
+:root{
+  --color-bg:#0A0B0D;--color-line:#23262D;--color-line-strong:#33373f;
+  --color-text:#F2F1EC;--color-text-muted:#8C8F97;--color-brand:#6FD6FF;--color-brand-hover:#9be3ff;--color-on-brand:#06161D;--color-label:#FF5A1F;
+  --glass-bg:rgba(255,255,255,.045);--glass-bg-strong:rgba(255,255,255,.08);--glass-line:rgba(255,255,255,.12);--glass-blur:18px;
+  --glass-blue-bg:rgba(111,214,255,.10);--glass-blue-line:rgba(111,214,255,.45);
+  --aura-blue:rgba(111,214,255,.17);--aura-orange:rgba(255,90,31,.12);
+  --font-display:"Plus Jakarta Sans",system-ui,sans-serif;--font-body:Inter,system-ui,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --gutter:clamp(1.25rem,5vw,5rem);--radius:20px;--hit:48px;--ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{background:var(--color-bg);scroll-padding-top:90px}
+html:not(.lenis){scroll-behavior:smooth}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font:400 1rem/1.6 var(--font-body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1760px;margin:0 auto;padding-inline:var(--gutter)}
+.eyebrow{font:700 .75rem/1 var(--font-display);letter-spacing:.14em;text-transform:uppercase;color:var(--color-label)}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;margin:0}
+.glass{background:var(--glass-bg);border:1px solid var(--glass-line);-webkit-backdrop-filter:blur(var(--glass-blur));backdrop-filter:blur(var(--glass-blur));border-radius:var(--radius)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:var(--hit);padding:0 1.75rem;border-radius:999px;font:700 1rem/1 var(--font-display);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .15s var(--ease),border-color .15s}
+.btn-primary{background:var(--color-brand);color:var(--color-on-brand)}
+.btn-primary:hover{background:var(--color-brand-hover)}
+.btn-glass{background:var(--glass-blue-bg);border-color:var(--glass-blue-line);color:var(--color-text);-webkit-backdrop-filter:blur(var(--glass-blur));backdrop-filter:blur(var(--glass-blur))}
+.btn-glass:hover{background:rgba(111,214,255,.16)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--color-brand);outline-offset:3px}
+.skip{position:fixed;left:16px;top:-80px;z-index:200;display:inline-flex;align-items:center;min-height:48px;padding:0 1.25rem;border-radius:999px;background:var(--color-brand);color:var(--color-on-brand);font:700 1rem/1 var(--font-display);text-decoration:none}
+.skip:focus{top:14px}
+main:focus{outline:none}
+
+.aura{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.aura i{position:absolute;border-radius:50%;filter:blur(50px)}
+.aura .a1{width:62vmax;height:62vmax;left:-16vmax;top:-12vmax;background:radial-gradient(closest-side,var(--aura-blue),transparent 72%)}
+.aura .a2{width:58vmax;height:58vmax;right:-14vmax;bottom:-20vmax;background:radial-gradient(closest-side,var(--aura-orange),transparent 72%)}
+
+.top{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(10,11,13,.7);-webkit-backdrop-filter:blur(var(--glass-blur));backdrop-filter:blur(var(--glass-blur));border-bottom:1px solid var(--glass-line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:76px}
+.top .logo{display:inline-flex;align-items:center;min-height:44px}
+.top .logo svg{height:30px;width:auto;display:block}
+.nav{display:flex;gap:.25rem}
+.nav a{min-height:var(--hit);display:inline-flex;align-items:center;padding:0 1rem;color:var(--color-text-muted);text-decoration:none;font:600 .9375rem var(--font-display)}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--color-text)}
+.top .btn{min-height:44px;padding:0 1.25rem;font-size:.9375rem}
+main{position:relative;z-index:2}
+
+.hero{padding-top:calc(76px + clamp(3rem,7vw,6rem));padding-bottom:clamp(1rem,3vw,2.5rem)}
+.hero .eyebrow{display:block;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(4rem,13vw,12rem);line-height:.9;letter-spacing:-.05em}
+.hero .lead{margin:1.75rem 0 0;font-size:clamp(1.125rem,1.7vw,1.5rem);color:var(--color-text-muted);max-width:30em}
+
+/* one case per row. Only a row with a finished case study is a link. */
+.cases{list-style:none;margin:0;padding:0}
+.case{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,5vw,5rem);align-items:center;padding-block:clamp(2.5rem,5vw,4.5rem);border-top:1px solid var(--glass-line);color:inherit;text-decoration:none}
+.case .count{font:400 12px var(--font-mono);letter-spacing:.14em;color:var(--color-brand);display:block;margin-bottom:1.25rem}
+.case .tag{font:700 .75rem/1 var(--font-display);letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted);display:block;margin-bottom:1rem}
+.case h2{font-size:clamp(3rem,7vw,7rem);line-height:.92;letter-spacing:-.045em}
+.case p{margin:1.5rem 0 0;font-size:clamp(1.125rem,1.5vw,1.375rem);color:var(--color-text-muted);max-width:26em}
+.case .go{margin-top:2rem}
+.case .soon{display:inline-block;margin-top:2rem;font:400 12px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted)}
+.frame{border-radius:var(--radius);overflow:hidden;border:1px solid var(--glass-line);background:#fff;box-shadow:0 40px 100px rgba(0,0,0,.55)}
+.frame img{width:100%;height:auto;transition:transform .5s var(--ease)}
+a.case:hover .frame img{transform:scale(1.025)}
+a.case:hover .go{background:rgba(111,214,255,.16)}
+
+/* the concept sits in its own box so it is never read as client work */
+.concept{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,5vw,5rem);align-items:center;padding:clamp(1.5rem,4vw,3.5rem);border-style:dashed;margin-top:1rem}
+.concept .note{display:inline-block;padding:.5rem .875rem;border-radius:999px;border:1px solid var(--color-label);color:var(--color-label);font:700 .75rem/1.3 var(--font-display);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.5rem}
+.concept h2{font-size:clamp(2rem,4vw,3.75rem);line-height:1;letter-spacing:-.035em}
+.concept p{margin:1.25rem 0 0;font-size:1.125rem;color:var(--color-text-muted);max-width:28em}
+.concept .phone{justify-self:center;width:min(100%,280px);border-radius:28px;overflow:hidden;border:1px solid var(--glass-line);box-shadow:0 40px 100px rgba(0,0,0,.55)}
+.concept .phone img{width:100%;height:auto}
+
+section{position:relative;padding-block:clamp(3rem,7vw,6rem)}
+.label-row{display:block;margin-bottom:1.5rem}
+.cta h2{font-size:clamp(2.5rem,7vw,6.5rem);line-height:.95;letter-spacing:-.04em;max-width:11em}
+.cta h2 span{color:var(--color-brand)}
+.cta .row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:2.5rem}
+footer.site{position:relative;z-index:2;border-top:1px solid var(--glass-line);padding-block:2rem;color:var(--color-text-muted);font-size:1rem}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;justify-content:space-between;align-items:center}
+footer.site a{min-height:var(--hit);display:inline-flex;align-items:center;text-decoration:none}
+footer.site a:hover{color:var(--color-text)}
+
+@media (max-width:900px){.nav{display:none}.case,.concept{grid-template-columns:1fr}.case .shot{order:-1}}
+@media (max-width:560px){.top .btn{padding:0 1rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="aura" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="../" aria-label="Orivane, home"><svg role="img" aria-label="Orivane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392 100" width="392" height="100"><g transform="translate(0 0) scale(1)"><circle cx="50" cy="50" r="44" fill="none" stroke="#F2F1EC" stroke-width="5"/><g transform="rotate(38 50 50)"><path d="M50 12 L58 50 L42 50 Z" fill="#6FD6FF"/><path d="M42 50 L58 50 L50 88 Z" fill="#F2F1EC" fill-opacity=".35"/></g></g><path d="M148.05499267578125 69.27499999999999Q142.50499267578124 69.27499999999999 138.17186126708984 66.98562774658203Q133.83872985839844 64.69625549316406 131.38059844970704 60.43437957763672Q128.92246704101564 56.17250366210937 128.92246704101564 50.30374450683593V49.208737182617185Q128.92246704101564 43.33997802734375 131.38059844970704 39.078102111816406Q133.83872985839844 34.81622619628906 138.17186126708984 32.526853942871085Q142.50499267578124 30.23748168945312 148.05499267578125 30.23748168945312Q153.60499267578126 30.23748168945312 157.93812408447266 32.526853942871085Q162.27125549316406 34.81622619628906 164.72938690185546 39.078102111816406Q167.18751831054686 43.33997802734375 167.18751831054686 49.208737182617185V50.30374450683593Q167.18751831054686 56.17250366210937 164.72938690185546 60.43437957763672Q162.27125549316406 64.69625549316406 157.93812408447266 66.98562774658203Q153.60499267578126 69.27499999999999 148.05499267578125 69.27499999999999ZM148.05499267578125 62.39739379882812Q153.13994140625 62.39739379882812 156.30491943359374 59.13867492675781Q159.4698974609375 55.8799560546875 159.4698974609375 50.10499267578125V49.40748901367187Q159.4698974609375 43.63252563476562 156.32929534912108 40.37380676269531Q153.18869323730468 37.11508789062499 148.05499267578125 37.11508789062499Q142.9962921142578 37.11508789062499 139.8181900024414 40.37380676269531Q136.640087890625 43.63252563476562 136.640087890625 49.40748901367187V50.10499267578125Q136.640087890625 55.8799560546875 139.8181900024414 59.13867492675781Q142.9962921142578 62.39739379882812 148.05499267578125 62.39739379882812ZM176.09746704101562 68.225V31.287481689453124H183.665087890625V35.61872253417968H184.85759887695312Q185.76134338378907 33.28997802734374 187.7263397216797 32.21372985839843Q189.69133605957032 31.137481689453118 192.63505859375 31.137481689453118H197.05631408691406V38.06758422851562H192.35381774902345Q188.57008056640626 38.06758422851562 186.1925842285156 40.124449157714835Q183.815087890625 42.18131408691406 183.815087890625 46.49754028320312V68.225ZM204.37246704101562 68.225V31.287481689453124H212.090087890625V68.225ZM208.2312774658203 26.255029296874994Q205.99625549316406 26.255029296874994 204.4568649291992 24.788766479492182Q202.91747436523437 23.32250366210937 202.91747436523437 20.989978027343746Q202.91747436523437 18.631204223632807 204.4568649291992 17.178065490722652Q205.99625549316406 15.724926757812497 208.2312774658203 15.724926757812497Q210.54129943847656 15.724926757812497 212.0431900024414 17.178065490722652Q213.54508056640626 18.631204223632807 213.54508056640626 20.989978027343746Q213.54508056640626 23.32250366210937 212.0431900024414 24.788766479492182Q210.54129943847656 26.255029296874994 208.2312774658203 26.255029296874994ZM231.35741577148437 68.225 218.87745971679686 31.287481689453124H227.090087890625L236.89625549316406 62.53241577148437H238.0887664794922L247.89493408203123 31.287481689453124H256.10756225585936L243.62760620117186 68.225ZM274.291226196289 69.27499999999999Q270.36872253417965 69.27499999999999 267.2318466186523 67.9137481689453Q264.094970703125 66.55249633789062 262.27059478759764 63.92936859130859Q260.4462188720703 61.30624084472656 260.4462188720703 57.559985351562496Q260.4462188720703 53.78748168945312 262.27059478759764 51.2656021118164Q264.094970703125 48.74372253417968 267.2918502807617 47.47059478759765Q270.4887298583984 46.19746704101562 274.53124084472654 46.19746704101562H285.8336639404297V43.80873718261718Q285.8336639404297 40.55378112792968 283.8686859130859 38.5906753540039Q281.90370788574216 36.62756958007812 277.85748901367185 36.62756958007812Q273.8862701416015 36.62756958007812 271.7806716918945 38.502551269531246Q269.67507324218747 40.377532958984375 268.9925842285156 43.42624816894531L261.8149780273437 41.07870788574218Q262.7149780273437 38.09746704101562 264.6893539428711 35.65622253417968Q266.6637298583984 33.21497802734375 269.9618576049804 31.726229858398433Q273.2599853515625 30.23748168945312 277.9549926757812 30.23748168945312Q285.14750366210933 30.23748168945312 289.2518905639648 33.88623352050781Q293.3562774658203 37.5349853515625 293.3562774658203 44.32624816894531V59.539904785156246Q293.3562774658203 61.789904785156246 295.4562774658203 61.789904785156246H298.6400146484375V68.225H292.86497802734374Q290.2474670410156 68.225 288.6049560546875 66.86187591552734Q286.96244506835933 65.49875183105468 286.96244506835933 63.19625549316406V62.96376647949218H285.77367858886714Q285.23744506835936 64.12624816894531 284.01683197021487 65.62812042236328Q282.7962188720703 67.12999267578124 280.46747436523435 68.20249633789061Q278.1387298583984 69.27499999999999 274.291226196289 69.27499999999999ZM275.4687591552734 62.884912109374994Q280.07371520996094 62.884912109374994 282.9536895751953 60.226193237304685Q285.8336639404297 57.56747436523437 285.8336639404297 52.94754028320312V52.145043945312494H274.996255493164Q271.92503662109374 52.145043945312494 270.0444381713867 53.46690521240234Q268.16383972167966 54.78876647949218 268.16383972167966 57.33872985839843Q268.16383972167966 59.88869323730468 270.1194381713867 61.38680267333984Q272.0750366210937 62.884912109374994 275.4687591552734 62.884912109374994ZM305.3974670410156 68.225V31.287481689453124H312.96508789062494V36.81868591308593H314.1575988769531Q315.21508789062494 34.52745971679687 317.90007324218743 32.58122253417969Q320.58505859375 30.6349853515625 325.8987884521484 30.6349853515625Q330.11754760742184 30.6349853515625 333.3931716918945 32.50436859130859Q336.6687957763671 34.37375183105468 338.5344161987304 37.80875549316406Q340.4000366210937 41.24375915527344 340.4000366210937 46.02499999999999V68.225H332.68241577148433V46.61751098632812Q332.68241577148433 41.78755493164062 330.2918136596679 39.50381774902343Q327.9012115478515 37.220080566406246 323.65624084472654 37.220080566406246Q318.8600219726562 37.220080566406246 315.9875549316406 40.39631042480468Q313.115087890625 43.572540283203125 313.115087890625 49.56123352050781V68.225ZM367.66997070312493 69.27499999999999Q362.0937225341796 69.27499999999999 357.8824707031249 66.9125Q353.67121887207026 64.55 351.3218429565429 60.25062408447265Q348.9724670410156 55.951248168945305 348.9724670410156 50.20624084472656V49.30624084472656Q348.9724670410156 43.5349853515625 351.2974670410156 39.24873352050781Q353.62246704101557 34.96248168945312 357.78309478759763 32.59998168945312Q361.94372253417964 30.23748168945312 367.3887298583984 30.23748168945312Q372.73248901367185 30.23748168945312 376.7431167602539 32.56998901367187Q380.7537445068359 34.90249633789062 383.0037445068359 39.110003662109364Q385.2537445068359 43.31751098632812 385.2537445068359 48.965014648437496V51.90128479003906H356.78759155273434Q356.9638397216796 56.77621154785156 360.0969345092773 59.63555450439453Q363.23002929687493 62.494897460937494 367.8649780273437 62.494897460937494Q372.2337005615234 62.494897460937494 374.4368026733398 60.55991210937499Q376.6399047851562 58.624926757812496 377.7986419677734 56.07870788574218L384.2374816894531 59.341262817382805Q383.1612335205078 61.474999999999994 381.17373352050777 63.788748168945304Q379.18623352050776 66.10249633789061 375.93872985839835 67.6887481689453Q372.691226196289 69.27499999999999 367.66997070312493 69.27499999999999ZM356.86259155273433 45.95370788574218H377.4123718261718Q377.11237182617185 41.78377380371093 374.3917770385742 39.40067901611327Q371.6711822509765 37.01758422851562 367.3399780273437 37.01758422851562Q362.9375183105468 37.01758422851562 360.21505126953116 39.40067901611327Q357.49258422851557 41.78377380371093 356.86259155273433 45.95370788574218Z" fill="#F2F1EC"/></svg></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../#make">Services</a>
+      <a href="../#how">Process</a>
+      <a href="./" aria-current="page">Work</a>
+      <a href="../#who">About</a>
+    </nav>
+    <a class="btn btn-primary" href="../#contact">Start a project</a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Work</span>
+    <h1>Real work.</h1>
+    <p class="lead">Two client projects and one of our own. Each one started with a problem, not a brief.</p>
+  </div>
+</section>
+
+<section aria-label="Case studies" style="padding-top:0">
+  <div class="wrap">
+    <ul class="cases">
+      <li>
+        <a class="case" href="printiq.html">
+          <div><span class="count">01 / 03</span><span class="tag">Client work</span><h2>Printiq</h2>
+            <p>A print shop's invoices, orders and dues, on one screen instead of three.</p>
+            <span class="btn btn-glass go">Read the case study</span></div>
+          <div class="shot"><div class="frame"><img src="../assets/s-dashboard-1280.webp" width="1280" height="720" alt="Printiq dashboard: who owes money, orders in progress"></div></div>
+        </a>
+      </li>
+      <li>
+        <div class="case">
+          <div><span class="count">02 / 03</span><span class="tag">Client work</span><h2>DayExam</h2>
+            <p>Exam practice for students. 3.5K+ enrolled.</p>
+            <span class="soon">Case study coming soon</span></div>
+          <div class="shot"><div class="frame"><img loading="lazy" decoding="async" src="../assets/shot-dayexam-home-1280.webp" width="1280" height="800" alt="DayExam home page"></div></div>
+        </div>
+      </li>
+      <li>
+        <div class="case">
+          <div><span class="count">03 / 03</span><span class="tag">Own project</span><h2>Portfolio</h2>
+            <p>A story-first portfolio website for a product designer. I was my own client.</p>
+            <span class="soon">Case study coming soon</span></div>
+          <div class="shot"><div class="frame"><img loading="lazy" decoding="async" src="../assets/portfolio-home-1280.webp" width="1280" height="720" alt="Portfolio website home page"></div></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="concept-h" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow label-row">Concepts</span>
+    <div class="concept glass">
+      <div>
+        <span class="note">Proposed concept. Not pitched to anyone yet.</span>
+        <h2 id="concept-h">Dhaka Metro Companion</h2>
+        <p>A phone app idea for people who ride the Dhaka Metro. Our own exploration, with no client behind it.</p>
+      </div>
+      <div class="phone"><img loading="lazy" decoding="async" src="../assets/shot-metro-home.webp" width="750" height="1624" alt="Dhaka Metro Companion concept, home screen"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow label-row">Next</span>
+    <h2>Bring the <span>problem.</span></h2>
+    <div class="row">
+      <a class="btn btn-primary" href="../#contact">Start a project</a>
+      <a class="btn btn-glass" href="../">Back to home</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>&copy; 2026 Orivane &middot; Mirpur, Dhaka</span>
+    <a href="mailto:orivane.studio9882@gmail.com">orivane.studio9882@gmail.com</a>
+    <a href="../">Home</a>
+  </div>
+</footer>
+
+<script defer src="../js/page.js"></script>
+</body>
+</html>

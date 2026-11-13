@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orivane | Design and software studio</title>
+<meta name="description" content="Orivane is a design and software studio in Dhaka. We design CRMs, dashboards, websites and apps, then build them, or hand them to a developer.">
+<meta name="theme-color" content="#0A0B0D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orivane">
+<meta property="og:title" content="Orivane | Bring the problem. Leave with the product.">
+<meta property="og:description" content="Orivane is a design and software studio in Dhaka. We design CRMs, dashboards, websites and apps, then build them, or hand them to a developer.">
+<!-- og:image and og:url must be full web addresses. Fill them in when the live address is known (see progress-log.md). -->
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orivane. Bring the problem. Leave with the product.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" as="image" href="assets/s-dashboard.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<div id="loader" role="status">
+  <span class="sr-only">Loading Orivane</span>
+  <span class="ld-brand" aria-hidden="true">orivane</span>
+  <div class="ld-num" aria-hidden="true"><b id="ldN">0</b><i>%</i></div>
+  <p class="ld-left" aria-hidden="true"><span id="ldL">100</span>% to go</p>
+</div>
+<script>
+/* Loader. Real progress (fonts 25, three.js 45, scene build 20, start 10), but it never
+   runs faster than 2.6s so the count can be read. Hard stop at 12s falls back to plain text. */
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var el=document.getElementById('loader'),N=document.getElementById('ldN'),L=document.getElementById('ldL');
+  var w={fonts:25,three:45,build:20},got={fonts:0,three:0,build:0};
+  var shown=0,start=performance.now(),minMs=reduce?250:2000,ended=false,resolve;
+  var done=new Promise(function(r){resolve=r});
+  function target(){return 10+w.fonts*got.fonts+w.three*got.three+w.build*got.build}
+  function finish(){
+    if(ended)return;ended=true;N.textContent=100;L.textContent=0;
+    setTimeout(function(){el.classList.add('out');resolve();},reduce?0:350);
+    setTimeout(function(){el.style.display='none';},reduce?0:1000);
+  }
+  function fail(){
+    if(ended)return;ended=true;
+    document.body.classList.add('nogl');el.classList.add('out');
+    setTimeout(function(){el.style.display='none';},700);
+  }
+  /* timer, not requestAnimationFrame: rAF stops in background tabs and would stall the count */
+  var timer;
+  function tick(){
+    if(ended){clearInterval(timer);return;}
+    var floor=Math.min(1,(performance.now()-start)/minMs)*100;
+    var tg=Math.min(target(),floor);
+    shown+=(tg-shown)*.2;
+    if(tg>=100&&shown>99.4){clearInterval(timer);finish();return;}
+    var n=Math.min(99,Math.floor(shown+.0001));
+    N.textContent=n;L.textContent=100-n;
+  }
+  window.__loader={mark:function(k){got[k]=1},done:done,fail:fail};
+  setTimeout(function(){el.classList.add('ready')},60);
+  setTimeout(function(){if(!ended)fail();},12000);
+  timer=setInterval(tick,33);
+})();
+</script>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Orivane, back to top"><svg role="img" aria-label="Orivane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392 100" width="392" height="100"><g transform="translate(0 0) scale(1)"><circle cx="50" cy="50" r="44" fill="none" stroke="#F2F1EC" stroke-width="5"/><g transform="rotate(38 50 50)"><path d="M50 12 L58 50 L42 50 Z" fill="#6FD6FF"/><path d="M42 50 L58 50 L50 88 Z" fill="#F2F1EC" fill-opacity=".35"/></g></g><path d="M148.05499267578125 69.27499999999999Q142.50499267578124 69.27499999999999 138.17186126708984 66.98562774658203Q133.83872985839844 64.69625549316406 131.38059844970704 60.43437957763672Q128.92246704101564 56.17250366210937 128.92246704101564 50.30374450683593V49.208737182617185Q128.92246704101564 43.33997802734375 131.38059844970704 39.078102111816406Q133.83872985839844 34.81622619628906 138.17186126708984 32.526853942871085Q142.50499267578124 30.23748168945312 148.05499267578125 30.23748168945312Q153.60499267578126 30.23748168945312 157.93812408447266 32.526853942871085Q162.27125549316406 34.81622619628906 164.72938690185546 39.078102111816406Q167.18751831054686 43.33997802734375 167.18751831054686 49.208737182617185V50.30374450683593Q167.18751831054686 56.17250366210937 164.72938690185546 60.43437957763672Q162.27125549316406 64.69625549316406 157.93812408447266 66.98562774658203Q153.60499267578126 69.27499999999999 148.05499267578125 69.27499999999999ZM148.05499267578125 62.39739379882812Q153.13994140625 62.39739379882812 156.30491943359374 59.13867492675781Q159.4698974609375 55.8799560546875 159.4698974609375 50.10499267578125V49.40748901367187Q159.4698974609375 43.63252563476562 156.32929534912108 40.37380676269531Q153.18869323730468 37.11508789062499 148.05499267578125 37.11508789062499Q142.9962921142578 37.11508789062499 139.8181900024414 40.37380676269531Q136.640087890625 43.63252563476562 136.640087890625 49.40748901367187V50.10499267578125Q136.640087890625 55.8799560546875 139.8181900024414 59.13867492675781Q142.9962921142578 62.39739379882812 148.05499267578125 62.39739379882812ZM176.09746704101562 68.225V31.287481689453124H183.665087890625V35.61872253417968H184.85759887695312Q185.76134338378907 33.28997802734374 187.7263397216797 32.21372985839843Q189.69133605957032 31.137481689453118 192.63505859375 31.137481689453118H197.05631408691406V38.06758422851562H192.35381774902345Q188.57008056640626 38.06758422851562 186.1925842285156 40.124449157714835Q183.815087890625 42.18131408691406 183.815087890625 46.49754028320312V68.225ZM204.37246704101562 68.225V31.287481689453124H212.090087890625V68.225ZM208.2312774658203 26.255029296874994Q205.99625549316406 26.255029296874994 204.4568649291992 24.788766479492182Q202.91747436523437 23.32250366210937 202.91747436523437 20.989978027343746Q202.91747436523437 18.631204223632807 204.4568649291992 17.178065490722652Q205.99625549316406 15.724926757812497 208.2312774658203 15.724926757812497Q210.54129943847656 15.724926757812497 212.0431900024414 17.178065490722652Q213.54508056640626 18.631204223632807 213.54508056640626 20.989978027343746Q213.54508056640626 23.32250366210937 212.0431900024414 24.788766479492182Q210.54129943847656 26.255029296874994 208.2312774658203 26.255029296874994ZM231.35741577148437 68.225 218.87745971679686 31.287481689453124H227.090087890625L236.89625549316406 62.53241577148437H238.0887664794922L247.89493408203123 31.287481689453124H256.10756225585936L243.62760620117186 68.225ZM274.291226196289 69.27499999999999Q270.36872253417965 69.27499999999999 267.2318466186523 67.9137481689453Q264.094970703125 66.55249633789062 262.27059478759764 63.92936859130859Q260.4462188720703 61.30624084472656 260.4462188720703 57.559985351562496Q260.4462188720703 53.78748168945312 262.27059478759764 51.2656021118164Q264.094970703125 48.74372253417968 267.2918502807617 47.47059478759765Q270.4887298583984 46.19746704101562 274.53124084472654 46.19746704101562H285.8336639404297V43.80873718261718Q285.8336639404297 40.55378112792968 283.8686859130859 38.5906753540039Q281.90370788574216 36.62756958007812 277.85748901367185 36.62756958007812Q273.8862701416015 36.62756958007812 271.7806716918945 38.502551269531246Q269.67507324218747 40.377532958984375 268.9925842285156 43.42624816894531L261.8149780273437 41.07870788574218Q262.7149780273437 38.09746704101562 264.6893539428711 35.65622253417968Q266.6637298583984 33.21497802734375 269.9618576049804 31.726229858398433Q273.2599853515625 30.23748168945312 277.9549926757812 30.23748168945312Q285.14750366210933 30.23748168945312 289.2518905639648 33.88623352050781Q293.3562774658203 37.5349853515625 293.3562774658203 44.32624816894531V59.539904785156246Q293.3562774658203 61.789904785156246 295.4562774658203 61.789904785156246H298.6400146484375V68.225H292.86497802734374Q290.2474670410156 68.225 288.6049560546875 66.86187591552734Q286.96244506835933 65.49875183105468 286.96244506835933 63.19625549316406V62.96376647949218H285.77367858886714Q285.23744506835936 64.12624816894531 284.01683197021487 65.62812042236328Q282.7962188720703 67.12999267578124 280.46747436523435 68.20249633789061Q278.1387298583984 69.27499999999999 274.291226196289 69.27499999999999ZM275.4687591552734 62.884912109374994Q280.07371520996094 62.884912109374994 282.9536895751953 60.226193237304685Q285.8336639404297 57.56747436523437 285.8336639404297 52.94754028320312V52.145043945312494H274.996255493164Q271.92503662109374 52.145043945312494 270.0444381713867 53.46690521240234Q268.16383972167966 54.78876647949218 268.16383972167966 57.33872985839843Q268.16383972167966 59.88869323730468 270.1194381713867 61.38680267333984Q272.0750366210937 62.884912109374994 275.4687591552734 62.884912109374994ZM305.3974670410156 68.225V31.287481689453124H312.96508789062494V36.81868591308593H314.1575988769531Q315.21508789062494 34.52745971679687 317.90007324218743 32.58122253417969Q320.58505859375 30.6349853515625 325.8987884521484 30.6349853515625Q330.11754760742184 30.6349853515625 333.3931716918945 32.50436859130859Q336.6687957763671 34.37375183105468 338.5344161987304 37.80875549316406Q340.4000366210937 41.24375915527344 340.4000366210937 46.02499999999999V68.225H332.68241577148433V46.61751098632812Q332.68241577148433 41.78755493164062 330.2918136596679 39.50381774902343Q327.9012115478515 37.220080566406246 323.65624084472654 37.220080566406246Q318.8600219726562 37.220080566406246 315.9875549316406 40.39631042480468Q313.115087890625 43.572540283203125 313.115087890625 49.56123352050781V68.225ZM367.66997070312493 69.27499999999999Q362.0937225341796 69.27499999999999 357.8824707031249 66.9125Q353.67121887207026 64.55 351.3218429565429 60.25062408447265Q348.9724670410156 55.951248168945305 348.9724670410156 50.20624084472656V49.30624084472656Q348.9724670410156 43.5349853515625 351.2974670410156 39.24873352050781Q353.62246704101557 34.96248168945312 357.78309478759763 32.59998168945312Q361.94372253417964 30.23748168945312 367.3887298583984 30.23748168945312Q372.73248901367185 30.23748168945312 376.7431167602539 32.56998901367187Q380.7537445068359 34.90249633789062 383.0037445068359 39.110003662109364Q385.2537445068359 43.31751098632812 385.2537445068359 48.965014648437496V51.90128479003906H356.78759155273434Q356.9638397216796 56.77621154785156 360.0969345092773 59.63555450439453Q363.23002929687493 62.494897460937494 367.8649780273437 62.494897460937494Q372.2337005615234 62.494897460937494 374.4368026733398 60.55991210937499Q376.6399047851562 58.624926757812496 377.7986419677734 56.07870788574218L384.2374816894531 59.341262817382805Q383.1612335205078 61.474999999999994 381.17373352050777 63.788748168945304Q379.18623352050776 66.10249633789061 375.93872985839835 67.6887481689453Q372.691226196289 69.27499999999999 367.66997070312493 69.27499999999999ZM356.86259155273433 45.95370788574218H377.4123718261718Q377.11237182617185 41.78377380371093 374.3917770385742 39.40067901611327Q371.6711822509765 37.01758422851562 367.3399780273437 37.01758422851562Q362.9375183105468 37.01758422851562 360.21505126953116 39.40067901611327Q357.49258422851557 41.78377380371093 356.86259155273433 45.95370788574218Z" fill="#F2F1EC"/></svg></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#make">Services</a>
+      <a href="#how">Process</a>
+      <a href="#proof">Work</a>
+      <a href="#who">About</a>
+    </nav>
+    <div class="right">
+      <a class="btn btn-primary" href="#contact">Start a project</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+<div class="aura" id="aura" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+<canvas id="c" aria-hidden="true"></canvas>
+<div class="hud" id="h1" aria-hidden="true">// orivane.studio</div>
+<div class="hud" id="h2" aria-hidden="true">Scroll to discover</div>
+<div class="hud" id="h4" aria-hidden="true">Click to skip intro</div>
+
+<main id="top" tabindex="-1">
+
+<div class="hero" id="hero">
+  <p class="label">Design and software studio</p>
+  <h1><span>Bring the problem.</span><span>Leave with the <b>product.</b></span></h1>
+  <p class="sub">We design CRMs, dashboards, websites and apps, then build them, or hand them to a developer when you need real code.</p>
+  <div class="hero-btns">
+    <a class="cta" href="#contact">Start a project</a>
+    <a class="btn btn-ghost" href="#proof">See real work</a>
+  </div>
+  <img class="hero-fig" src="assets/s-dashboard.webp" width="1920" height="1080" decoding="async" alt="Printiq dashboard: who owes you, orders in progress">
+</div>
+<!-- Hero testimonial. PLACEHOLDER: Mahmud's real words are not written yet. Never ship an invented quote. -->
+<aside class="quote-hero" id="qh" hidden aria-label="Client review, pending (hidden for now; Shihab will show it as a glass card later)">
+  <span class="eyebrow">Review slot, waiting for the real words</span>
+  <p>&ldquo;<span>Mahmud's own sentence about Printiq goes here.</span>&rdquo;</p>
+  <footer><div class="avatar" aria-hidden="true">M</div><div><b>Mahmud</b><small>Owner, Printiq</small></div></footer>
+</aside>
+<div class="next" id="next" aria-hidden="true"><p>One screen.</p><small>Next: services</small></div>
+<div class="spacer" id="stage"></div>
+
+<!-- 02 What we make -->
+<section id="make">
+  <div class="glow r"></div>
+  <div class="wrap">
+    <div class="pin">
+      <div class="sec-head">
+        <span class="eyebrow">01 / What we make</span>
+        <h2 class="split">Four things we make.</h2>
+        <p class="lead">Design first. We build it where it fits, or hand it to a developer we trust.</p>
+      </div>
+      <div class="grid4 cards svc">
+        <article class="card sv"><span class="idx" aria-hidden="true">01</span><h3>CRMs and tools</h3><p>The spreadsheet and the patience, replaced by one tool your staff can learn in a day.</p><ul class="eg"><li>Invoices and dues</li><li>Customer lists</li><li>Staff and owner views</li></ul></article>
+        <article class="card sv"><span class="idx" aria-hidden="true">02</span><h3>Dashboards</h3><p>The numbers you check every morning, on one screen, in plain words.</p><ul class="eg"><li>Daily and monthly numbers</li><li>Who owes you</li><li>Orders in progress</li></ul></article>
+        <article class="card sv"><span class="idx" aria-hidden="true">03</span><h3>Websites</h3><p>Sites and landing pages that say what you do in five seconds.</p><ul class="eg"><li>Landing pages</li><li>Business websites</li><li>Course and exam portals</li></ul></article>
+        <article class="card sv"><span class="idx" aria-hidden="true">04</span><h3>Mobile apps</h3><p>Clear screens for the phone first, then the rest.</p><ul class="eg"><li>Phone-first screens</li><li>Bangla or English</li><li>Clear states and errors</li></ul></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 How we work (paper chapter) -->
+<section id="how">
+  <div class="blur-pair" aria-hidden="true"><i class="b1"></i><i class="b2"></i></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">02 / How we work</span>
+      <h2 class="split">Three moves. No surprises.</h2>
+    </div>
+    <div class="steps">
+      <div class="step glass"><span class="num" aria-hidden="true">01</span><span class="eyebrow">Step 1</span><h3>Understand</h3><p>You tell us the mess. We ask until it is clear, and write it back to you.</p></div>
+      <div class="step glass"><span class="num" aria-hidden="true">02</span><span class="eyebrow">Step 2</span><h3>Design</h3><p>You see real screens, not a plan. You change what is wrong before anything is built.</p></div>
+      <div class="step glass"><span class="num" aria-hidden="true">03</span><span class="eyebrow">Step 3</span><h3>Build or hand over</h3><p>We build it, or give a developer a design they can follow without guessing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 Proof: one project per scene -->
+<section id="proof">
+  <div class="blur-pair up" aria-hidden="true"><i class="b1"></i><i class="b2"></i></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">03 / Proof</span>
+      <h2 class="split">Real work, real people using it.</h2>
+      <a class="more" href="work/">See all work<i aria-hidden="true">&rarr;</i></a>
+    </div>
+    <div class="pstage" id="pstage">
+      <div class="pscene s1">
+        <div class="ptext"><span class="count">01 / 03</span><span class="tag">Client work</span><h3>Printiq</h3><p>A print shop's invoices, orders and dues, on one screen instead of three.</p>
+          <!-- PLACEHOLDER lorem ipsum: Mahmud's real words come tomorrow. Replace before any deploy. -->
+          <figure class="review glass"><blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;</blockquote><figcaption><span class="avatar" aria-hidden="true">M</span><span><b>Mahmud</b><small>Owner, Printiq</small></span></figcaption></figure>
+          <a class="btn btn-glass" href="work/printiq.html">See the full case study</a>
+        </div>
+        <div class="pshots">
+          <div class="pimg a"><img loading="lazy" decoding="async" src="assets/s-dashboard-1280.webp" width="1280" height="720" alt="Printiq dashboard"></div>
+          <div class="pimg b"><img loading="lazy" decoding="async" src="assets/s-invoices-1280.webp" width="1280" height="720" alt="Printiq invoices list"></div>
+          <div class="pimg c"><img loading="lazy" decoding="async" src="assets/s-new-1280.webp" width="1280" height="720" alt="Printiq new invoice form"></div>
+        </div>
+      </div>
+      <div class="pscene s2">
+        <div class="ptext"><span class="count">02 / 03</span><span class="tag">Client work</span><h3>DayExam</h3><p>Exam practice for students. 3.5K+ enrolled.</p>
+          <!-- Case study page is not built yet, so the button is shown but off. -->
+          <span class="btn btn-glass soon" aria-disabled="true">See the full case study <small>soon</small></span>
+        </div>
+        <div class="pshots">
+          <div class="pimg a"><img loading="lazy" decoding="async" src="assets/shot-dayexam-home-1280.webp" width="1280" height="800" alt="DayExam home page"></div>
+          <div class="pimg b"><img loading="lazy" decoding="async" src="assets/shot-dayexam-1280.webp" width="1280" height="800" alt="DayExam exam finder"></div>
+        </div>
+      </div>
+      <div class="pscene s3">
+        <div class="ptext"><span class="count">03 / 03</span><span class="tag">Own project</span><h3>Portfolio</h3><p>A story-first portfolio website for a product designer. I was my own client.</p>
+          <!-- Case study page is not built yet, so the button is shown but off. -->
+          <span class="btn btn-glass soon" aria-disabled="true">See the full case study <small>soon</small></span>
+        </div>
+        <div class="pshots">
+          <div class="pimg a"><img loading="lazy" decoding="async" src="assets/portfolio-home-1280.webp" width="1280" height="720" alt="Portfolio website home page"></div>
+          <div class="pimg b"><img loading="lazy" decoding="async" src="assets/portfolio-work-1280.webp" width="1280" height="720" alt="Portfolio website Work archive"></div>
+          <div class="pimg c"><img loading="lazy" decoding="async" src="assets/portfolio-case-1280.webp" width="1280" height="720" alt="Portfolio website case study page"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 Who -->
+<section id="who">
+  <div class="glow o r"></div>
+  <div class="wrap">
+    <div class="who">
+      <div class="photo"><img loading="lazy" decoding="async" src="assets/shihab-photo.webp" width="741" height="1000" alt="Shihab, founder of Orivane"></div>
+      <div class="whotext">
+        <span class="eyebrow">04 / Who</span>
+        <h2 class="split">You talk to me, not an account manager.</h2>
+        <!-- Summary drafted from shihabsakib.netlify.app (About). Shihab to approve. Day job left out on purpose. -->
+        <p class="sum">I'm Shihab, a product designer in Dhaka. I studied business, spent fifteen years in music, then moved into design.</p>
+        <p class="sum">I design the screens and vibe-code the build, so what you approve is what you get. DayExam, a client project with 3.5K+ students enrolled, is work I owned end to end.</p>
+        <div class="chips"><span class="chip">Product design</span><span class="chip">Dashboards and CRMs</span><span class="chip">Websites</span><span class="chip">Vibe coding</span></div>
+        <div class="who-cta">
+          <a class="btn btn-primary" href="https://shihabsakib.netlify.app" target="_blank" rel="noopener">See my portfolio</a>
+          <a class="btn btn-ghost" href="#contact">Start a project</a>
+        </div>
+        <div class="who-find"><span class="eyebrow">Find me</span>
+          <div class="who-links">
+            <a href="https://www.linkedin.com/in/md-shihabun-sakib-4909b1283" target="_blank" rel="noopener">LinkedIn<i>&nearr;</i></a>
+            <a href="https://www.behance.net/skbui" target="_blank" rel="noopener">Behance<i>&nearr;</i></a>
+            <a href="https://dribbble.com/Shihabsakib" target="_blank" rel="noopener">Dribbble<i>&nearr;</i></a>
+            <a href="https://github.com/shihabsakib9882-bit" target="_blank" rel="noopener">GitHub<i>&nearr;</i></a>
+          </div></div>
+        <div class="who-mailbox"><span class="eyebrow">Write to me directly</span><br><a class="mail" href="mailto:shihabsakib9882@gmail.com">shihabsakib9882@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 Contact -->
+<section class="contact" id="contact">
+  <div class="glow l"></div>
+  <div class="wrap">
+    <span class="eyebrow">05 / Contact</span>
+    <h2><span class="w"><span class="i">Bring</span></span> <span class="w"><span class="i">the</span></span> <span class="w"><span class="i accent">problem.</span></span></h2>
+    <p class="lead">Write a few lines about what is not working. I answer myself.</p>
+    <div class="cf">
+<div id="live" aria-live="polite">
+    <div class="cf-card glass" id="formCard">
+      <form id="f" novalidate>
+        <div class="row2">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+            <p class="err" id="name-err"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-err">
+            <p class="err" id="email-err"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="idea">What do you want to build?</label>
+          <textarea id="idea" data-lenis-prevent name="idea" required aria-describedby="idea-err" placeholder="Describe it any way you like: what it is, who uses it, what is not working."></textarea>
+          <p class="err" id="idea-err"></p>
+        </div>
+
+        <div class="extras">
+          <div class="row2 extras-row">
+            <div class="field">
+              <label for="when">Preferred meeting time (optional)</label>
+              <input id="when" name="when" type="datetime-local">
+              <p class="hint">In your own time zone</p>
+            </div>
+            <div class="field briefslot">
+              <button type="button" class="linkbtn" id="briefToggle" aria-expanded="false" aria-controls="briefPanel">Already have a brief? (optional)</button>
+            </div>
+          </div>
+          <div class="panel" id="briefPanel" hidden>
+            <p>A brief is a short written note about what you want. Many people write it as an .md file, which is just a plain text file, like a note on your phone. You do not need one. If you want one, ask any AI chat:</p>
+            <pre class="prompt" id="promptText">Write a short project brief for [your idea]: what it is, who uses it, and the 5 main things it must do.</pre>
+            <button type="button" class="btn-quiet" id="copyPrompt">Copy prompt</button>
+            <p style="margin-bottom:14px">Then paste the result here.</p>
+            <label for="brief">Paste your brief here (optional)</label>
+            <textarea id="brief" data-lenis-prevent name="brief"></textarea>
+          </div>
+        </div>
+
+        <input type="hidden" id="tz" name="timezone">
+        <div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" id="company" tabindex="-1" autocomplete="off"></label></div>
+
+        <button type="submit" class="send" id="send">Send my request</button>
+
+        <div class="fallback" id="fallback" hidden role="alert">
+          <p>Could not send automatically. Email us instead:</p>
+          <p><a id="mailFallback" href="#">Open email</a></p>
+          <button type="button" class="btn-quiet" id="copyMsg" style="margin:0">Copy message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+    </div>
+    <span class="eyebrow cf-or">Or reach us directly</span>
+    <div class="cgrid">
+      <a class="ccard glass" href="mailto:orivane.studio9882@gmail.com?subject=A%20project%20for%20Orivane">
+        <span class="k">Email</span><span class="v">orivane.studio9882@gmail.com</span><span class="s">Opens your email, ready to write.</span>
+      </a>
+      <a class="ccard glass" href="https://wa.me/8801774145256" target="_blank" rel="noopener">
+        <span class="k">WhatsApp</span><span class="v">+880 1774-145256</span><span class="s">One tap opens a chat.</span>
+      </a>
+      <a class="ccard glass map" href="https://www.google.com/maps/search/?api=1&amp;query=Mirpur%2C%20Dhaka" target="_blank" rel="noopener" aria-label="Mirpur, Dhaka, open in Google Maps">
+        <span class="mapart" aria-hidden="true"><svg viewBox="0 0 200 90" preserveAspectRatio="none"><g fill="none" stroke="currentColor" stroke-width="1" opacity=".5"><path d="M0 62 L70 58 L120 40 L200 34"/><path d="M40 0 L52 90"/><path d="M110 0 L96 90"/><path d="M150 0 L170 90"/><path d="M0 20 L200 14"/><path d="M0 80 L200 76"/></g><circle cx="100" cy="46" r="26" fill="currentColor" opacity=".08"/></svg><svg class="pin" viewBox="0 0 24 32"><path d="M12 0C5.4 0 0 5.2 0 11.7 0 20 12 32 12 32s12-12 12-20.3C24 5.2 18.6 0 12 0Zm0 16a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z" fill="currentColor"/></svg></span>
+        <span class="k">Studio</span><span class="v">Mirpur, Dhaka</span><span class="s">Open in Maps &nearr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div><p class="tagline">Bring the problem. Leave with the product.</p><p>Design and software studio, Mirpur, Dhaka.</p></div>
+      <div><h4>Studio</h4><a href="#make">Services</a><a href="#how">Process</a><a href="#proof">Work</a><a href="work/">All work</a><a href="#who">About</a></div>
+      <div><h4>Follow</h4>
+        <a href="https://www.instagram.com/orivane.studio/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/orivane.studio" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/orivane-studio" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div><h4>Write</h4>
+        <a href="mailto:orivane.studio9882@gmail.com">orivane.studio9882@gmail.com</a>
+        <a href="mailto:shihabsakib9882@gmail.com">shihabsakib9882@gmail.com</a></div>
+    </div>
+    <div class="wordmark" id="wm" aria-hidden="true"><span>o</span><span>r</span><span>i</span><span>v</span><span>a</span><span>n</span><span>e</span></div>
+    <div class="fbottom"><span>&copy; 2026 Orivane</span><a href="#top">Back to top</a></div>
+  </div>
+</footer>
+
+<script defer src="js/form.js"></script>
+<script defer src="js/sections.js"></script>
+<script defer src="js/hero.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+</html>

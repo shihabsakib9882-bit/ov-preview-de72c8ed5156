@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Orivane</title>
+<meta name="description" content="Tell Orivane what you want to build. Name, email and a few lines are enough.">
+<meta name="theme-color" content="#0A0B0D">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="Tell Orivane what is not working. We write back.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0B0D; --text:#F2F1EC; --muted:#8C8F97; --blue:#6FD6FF; --orange:#FF5A1F;
+  --ink:#06161D; --line:rgba(255,255,255,.12); --err:#FFB4A0;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{
+  margin:0; min-height:100vh; background:var(--bg); color:var(--text);
+  font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  text-align:left; overflow-x:hidden; position:relative;
+}
+/* two very soft colour layers */
+body::before,body::after{content:"";position:fixed;z-index:0;pointer-events:none;width:1400px;height:1400px;max-width:160vw;max-height:160vw}
+body::before{top:-600px;left:-500px;background:radial-gradient(circle,rgba(111,214,255,.17) 0%,rgba(111,214,255,0) 65%)}
+body::after{bottom:-600px;right:-500px;background:radial-gradient(circle,rgba(255,90,31,.12) 0%,rgba(255,90,31,0) 65%)}
+.top{position:relative;z-index:2;padding:28px clamp(20px,5vw,80px) 0}
+.top .logo{display:inline-block}
+.top svg{height:30px;width:auto;display:block}
+main{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:56px 20px 96px}
+.row2{display:block}
+.extras-row .briefslot{margin:0;display:flex;align-items:flex-end}
+@media (min-width:760px){
+  main{max-width:960px;padding:72px 24px 96px}
+  .card{padding:40px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .extras-row{align-items:start}
+  .extras-row .briefslot{padding-top:26px}
+  textarea{min-height:168px}
+}
+.tag{font:700 12px/1 "Plus Jakarta Sans",Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:0 0 20px}
+h1{font:800 clamp(40px,7vw,64px)/1.04 "Plus Jakarta Sans",Inter,sans-serif;letter-spacing:-.02em;margin:0 0 16px}
+h1 span{color:var(--blue)}
+.lede{color:var(--muted);font-size:18px;margin:0 0 40px}
+.card{background:rgba(255,255,255,.045);border:1px solid var(--line);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-radius:20px;padding:32px}
+.field{margin:0 0 24px}
+label,.lbl{display:block;font-weight:500;font-size:14px;margin:0 0 8px}
+.hint{color:var(--muted);font-size:14px;margin:6px 0 0}
+input,textarea{
+  width:100%;min-height:48px;padding:12px 14px;font:400 16px/1.4 Inter,system-ui,sans-serif;color:var(--text);
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.2);border-radius:12px;
+  transition:border-color .15s,box-shadow .15s;
+}
+textarea{min-height:128px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#6d7078}
+input:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+input:focus,textarea:focus{border-color:var(--blue)}
+input[type=datetime-local]{color-scheme:dark}
+.invalid{border-color:var(--err)}
+.err{color:var(--err);font-size:14px;margin:6px 0 0;min-height:0}
+.err:empty{display:none}
+.extras{border-top:1px solid var(--line);margin-top:8px;padding-top:24px}
+.linkbtn{background:none;border:0;padding:0;min-height:44px;color:var(--muted);font:400 14px/1.3 Inter,sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer;display:inline-flex;align-items:center;transition:color .15s}
+.linkbtn:hover{color:var(--text)}
+.panel{margin:4px 0 24px;padding:20px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03)}
+.panel[hidden]{display:none}
+.panel p{margin:0 0 14px;font-size:15px}
+.prompt{margin:0 0 10px;padding:14px;border-radius:12px;background:rgba(0,0,0,.35);border:1px solid var(--line);font:400 14px/1.5 ui-monospace,Consolas,monospace;white-space:pre-wrap;word-break:break-word;color:var(--text)}
+.btn-quiet{min-height:44px;padding:8px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:var(--text);font:700 14px/1 "Plus Jakarta Sans",Inter,sans-serif;cursor:pointer;margin:0 0 20px;transition:border-color .15s}
+.btn-quiet:hover{border-color:var(--blue)}
+.btn{width:100%;min-height:52px;margin-top:8px;padding:14px 28px;border:0;border-radius:999px;background:var(--blue);color:var(--ink);font:700 16px/1 "Plus Jakarta Sans",Inter,sans-serif;cursor:pointer;transition:opacity .15s}
+.btn:hover{opacity:.9}
+.btn:disabled{opacity:.55;cursor:progress}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fallback{margin:20px 0 0;padding:16px;border:1px solid var(--err);border-radius:14px}
+.fallback[hidden]{display:none}
+.fallback p{margin:0 0 12px}
+.fallback a{color:var(--blue);word-break:break-word;display:inline-block;min-height:44px;padding:10px 0}
+.mail{margin:24px 0 0;color:var(--muted)}
+.mail a{color:var(--blue);display:inline-block;min-height:44px;padding:10px 0}
+.done h2{font:800 28px/1.2 "Plus Jakarta Sans",Inter,sans-serif;margin:0 0 12px}
+.done p{margin:0;color:var(--muted);font-size:18px}
+.done b{color:var(--text);font-weight:500;word-break:break-word}
+@media (max-width:600px){
+  main{padding:56px 20px 64px}
+  .card{padding:24px 20px}
+  .lede{font-size:16px;margin-bottom:28px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><a class="logo" href="./" aria-label="Orivane, back to the home page"><svg role="img" aria-label="Orivane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392 100" width="392" height="100"><g transform="translate(0 0) scale(1)"><circle cx="50" cy="50" r="44" fill="none" stroke="#F2F1EC" stroke-width="5"/><g transform="rotate(38 50 50)"><path d="M50 12 L58 50 L42 50 Z" fill="#6FD6FF"/><path d="M42 50 L58 50 L50 88 Z" fill="#F2F1EC" fill-opacity=".35"/></g></g><path d="M148.05499267578125 69.27499999999999Q142.50499267578124 69.27499999999999 138.17186126708984 66.98562774658203Q133.83872985839844 64.69625549316406 131.38059844970704 60.43437957763672Q128.92246704101564 56.17250366210937 128.92246704101564 50.30374450683593V49.208737182617185Q128.92246704101564 43.33997802734375 131.38059844970704 39.078102111816406Q133.83872985839844 34.81622619628906 138.17186126708984 32.526853942871085Q142.50499267578124 30.23748168945312 148.05499267578125 30.23748168945312Q153.60499267578126 30.23748168945312 157.93812408447266 32.526853942871085Q162.27125549316406 34.81622619628906 164.72938690185546 39.078102111816406Q167.18751831054686 43.33997802734375 167.18751831054686 49.208737182617185V50.30374450683593Q167.18751831054686 56.17250366210937 164.72938690185546 60.43437957763672Q162.27125549316406 64.69625549316406 157.93812408447266 66.98562774658203Q153.60499267578126 69.27499999999999 148.05499267578125 69.27499999999999ZM148.05499267578125 62.39739379882812Q153.13994140625 62.39739379882812 156.30491943359374 59.13867492675781Q159.4698974609375 55.8799560546875 159.4698974609375 50.10499267578125V49.40748901367187Q159.4698974609375 43.63252563476562 156.32929534912108 40.37380676269531Q153.18869323730468 37.11508789062499 148.05499267578125 37.11508789062499Q142.9962921142578 37.11508789062499 139.8181900024414 40.37380676269531Q136.640087890625 43.63252563476562 136.640087890625 49.40748901367187V50.10499267578125Q136.640087890625 55.8799560546875 139.8181900024414 59.13867492675781Q142.9962921142578 62.39739379882812 148.05499267578125 62.39739379882812ZM176.09746704101562 68.225V31.287481689453124H183.665087890625V35.61872253417968H184.85759887695312Q185.76134338378907 33.28997802734374 187.7263397216797 32.21372985839843Q189.69133605957032 31.137481689453118 192.63505859375 31.137481689453118H197.05631408691406V38.06758422851562H192.35381774902345Q188.57008056640626 38.06758422851562 186.1925842285156 40.124449157714835Q183.815087890625 42.18131408691406 183.815087890625 46.49754028320312V68.225ZM204.37246704101562 68.225V31.287481689453124H212.090087890625V68.225ZM208.2312774658203 26.255029296874994Q205.99625549316406 26.255029296874994 204.4568649291992 24.788766479492182Q202.91747436523437 23.32250366210937 202.91747436523437 20.989978027343746Q202.91747436523437 18.631204223632807 204.4568649291992 17.178065490722652Q205.99625549316406 15.724926757812497 208.2312774658203 15.724926757812497Q210.54129943847656 15.724926757812497 212.0431900024414 17.178065490722652Q213.54508056640626 18.631204223632807 213.54508056640626 20.989978027343746Q213.54508056640626 23.32250366210937 212.0431900024414 24.788766479492182Q210.54129943847656 26.255029296874994 208.2312774658203 26.255029296874994ZM231.35741577148437 68.225 218.87745971679686 31.287481689453124H227.090087890625L236.89625549316406 62.53241577148437H238.0887664794922L247.89493408203123 31.287481689453124H256.10756225585936L243.62760620117186 68.225ZM274.291226196289 69.27499999999999Q270.36872253417965 69.27499999999999 267.2318466186523 67.9137481689453Q264.094970703125 66.55249633789062 262.27059478759764 63.92936859130859Q260.4462188720703 61.30624084472656 260.4462188720703 57.559985351562496Q260.4462188720703 53.78748168945312 262.27059478759764 51.2656021118164Q264.094970703125 48.74372253417968 267.2918502807617 47.47059478759765Q270.4887298583984 46.19746704101562 274.53124084472654 46.19746704101562H285.8336639404297V43.80873718261718Q285.8336639404297 40.55378112792968 283.8686859130859 38.5906753540039Q281.90370788574216 36.62756958007812 277.85748901367185 36.62756958007812Q273.8862701416015 36.62756958007812 271.7806716918945 38.502551269531246Q269.67507324218747 40.377532958984375 268.9925842285156 43.42624816894531L261.8149780273437 41.07870788574218Q262.7149780273437 38.09746704101562 264.6893539428711 35.65622253417968Q266.6637298583984 33.21497802734375 269.9618576049804 31.726229858398433Q273.2599853515625 30.23748168945312 277.9549926757812 30.23748168945312Q285.14750366210933 30.23748168945312 289.2518905639648 33.88623352050781Q293.3562774658203 37.5349853515625 293.3562774658203 44.32624816894531V59.539904785156246Q293.3562774658203 61.789904785156246 295.4562774658203 61.789904785156246H298.6400146484375V68.225H292.86497802734374Q290.2474670410156 68.225 288.6049560546875 66.86187591552734Q286.96244506835933 65.49875183105468 286.96244506835933 63.19625549316406V62.96376647949218H285.77367858886714Q285.23744506835936 64.12624816894531 284.01683197021487 65.62812042236328Q282.7962188720703 67.12999267578124 280.46747436523435 68.20249633789061Q278.1387298583984 69.27499999999999 274.291226196289 69.27499999999999ZM275.4687591552734 62.884912109374994Q280.07371520996094 62.884912109374994 282.9536895751953 60.226193237304685Q285.8336639404297 57.56747436523437 285.8336639404297 52.94754028320312V52.145043945312494H274.996255493164Q271.92503662109374 52.145043945312494 270.0444381713867 53.46690521240234Q268.16383972167966 54.78876647949218 268.16383972167966 57.33872985839843Q268.16383972167966 59.88869323730468 270.1194381713867 61.38680267333984Q272.0750366210937 62.884912109374994 275.4687591552734 62.884912109374994ZM305.3974670410156 68.225V31.287481689453124H312.96508789062494V36.81868591308593H314.1575988769531Q315.21508789062494 34.52745971679687 317.90007324218743 32.58122253417969Q320.58505859375 30.6349853515625 325.8987884521484 30.6349853515625Q330.11754760742184 30.6349853515625 333.3931716918945 32.50436859130859Q336.6687957763671 34.37375183105468 338.5344161987304 37.80875549316406Q340.4000366210937 41.24375915527344 340.4000366210937 46.02499999999999V68.225H332.68241577148433V46.61751098632812Q332.68241577148433 41.78755493164062 330.2918136596679 39.50381774902343Q327.9012115478515 37.220080566406246 323.65624084472654 37.220080566406246Q318.8600219726562 37.220080566406246 315.9875549316406 40.39631042480468Q313.115087890625 43.572540283203125 313.115087890625 49.56123352050781V68.225ZM367.66997070312493 69.27499999999999Q362.0937225341796 69.27499999999999 357.8824707031249 66.9125Q353.67121887207026 64.55 351.3218429565429 60.25062408447265Q348.9724670410156 55.951248168945305 348.9724670410156 50.20624084472656V49.30624084472656Q348.9724670410156 43.5349853515625 351.2974670410156 39.24873352050781Q353.62246704101557 34.96248168945312 357.78309478759763 32.59998168945312Q361.94372253417964 30.23748168945312 367.3887298583984 30.23748168945312Q372.73248901367185 30.23748168945312 376.7431167602539 32.56998901367187Q380.7537445068359 34.90249633789062 383.0037445068359 39.110003662109364Q385.2537445068359 43.31751098632812 385.2537445068359 48.965014648437496V51.90128479003906H356.78759155273434Q356.9638397216796 56.77621154785156 360.0969345092773 59.63555450439453Q363.23002929687493 62.494897460937494 367.8649780273437 62.494897460937494Q372.2337005615234 62.494897460937494 374.4368026733398 60.55991210937499Q376.6399047851562 58.624926757812496 377.7986419677734 56.07870788574218L384.2374816894531 59.341262817382805Q383.1612335205078 61.474999999999994 381.17373352050777 63.788748168945304Q379.18623352050776 66.10249633789061 375.93872985839835 67.6887481689453Q372.691226196289 69.27499999999999 367.66997070312493 69.27499999999999ZM356.86259155273433 45.95370788574218H377.4123718261718Q377.11237182617185 41.78377380371093 374.3917770385742 39.40067901611327Q371.6711822509765 37.01758422851562 367.3399780273437 37.01758422851562Q362.9375183105468 37.01758422851562 360.21505126953116 39.40067901611327Q357.49258422851557 41.78377380371093 356.86259155273433 45.95370788574218Z" fill="#F2F1EC"/></svg></a></header>
+<main>
+  <p class="tag">Contact</p>
+  <h1>Bring the <span>problem.</span></h1>
+  <p class="lede">Tell us what is not working. We write back.</p>
+
+  <div id="live" aria-live="polite">
+    <div class="card" id="formCard">
+      <form id="f" novalidate>
+        <div class="row2">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+            <p class="err" id="name-err"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-err">
+            <p class="err" id="email-err"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="idea">What do you want to build?</label>
+          <textarea id="idea" name="idea" required aria-describedby="idea-err" placeholder="Describe it any way you like: what it is, who uses it, what is not working."></textarea>
+          <p class="err" id="idea-err"></p>
+        </div>
+
+        <div class="extras">
+          <div class="row2 extras-row">
+            <div class="field">
+              <label for="when">Preferred meeting time (optional)</label>
+              <input id="when" name="when" type="datetime-local">
+              <p class="hint">In your own time zone</p>
+            </div>
+            <div class="field briefslot">
+              <button type="button" class="linkbtn" id="briefToggle" aria-expanded="false" aria-controls="briefPanel">Already have a brief? (optional)</button>
+            </div>
+          </div>
+          <div class="panel" id="briefPanel" hidden>
+            <p>A brief is a short written note about what you want. Many people write it as an .md file, which is just a plain text file, like a note on your phone. You do not need one. If you want one, ask any AI chat:</p>
+            <pre class="prompt" id="promptText">Write a short project brief for [your idea]: what it is, who uses it, and the 5 main things it must do.</pre>
+            <button type="button" class="btn-quiet" id="copyPrompt">Copy prompt</button>
+            <p style="margin-bottom:14px">Then paste the result here.</p>
+            <label for="brief">Paste your brief here (optional)</label>
+            <textarea id="brief" name="brief"></textarea>
+          </div>
+        </div>
+
+        <input type="hidden" id="tz" name="timezone">
+        <div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" id="company" tabindex="-1" autocomplete="off"></label></div>
+
+        <button type="submit" class="btn" id="send">Send my request</button>
+
+        <div class="fallback" id="fallback" hidden role="alert">
+          <p>Could not send automatically. Email us instead:</p>
+          <p><a id="mailFallback" href="#">Open email</a></p>
+          <button type="button" class="btn-quiet" id="copyMsg" style="margin:0">Copy message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <p class="mail">Or email us: <a href="mailto:orivane.studio9882@gmail.com">orivane.studio9882@gmail.com</a></p>
+</main>
+
+<script>
+// Paste your Google Apps Script web app URL here (see form/FORM-SETUP.md).
+const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbwSj3yGYcUodJ7GY3Zol7_JPPwr92z-DjPWwwyD-r3HIM8NfqwinqDy5gwWlStzGFpyHQ/exec";
+const TO = "orivane.studio9882@gmail.com";
+const TIMEOUT_MS = 10000;
+
+const $ = id => document.getElementById(id);
+const f = $("f"), send = $("send");
+let tz = "";
+try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+$("tz").value = tz;
+
+// Brief panel
+$("briefToggle").addEventListener("click", () => {
+  const p = $("briefPanel"), open = p.hidden;
+  p.hidden = !open; $("briefToggle").setAttribute("aria-expanded", String(open));
+});
+
+async function copyText(text, btn, label) {
+  try { await navigator.clipboard.writeText(text); }
+  catch (e) {
+    const t = document.createElement("textarea"); t.value = text; document.body.appendChild(t); t.select();
+    try { document.execCommand("copy"); } catch (_) {} t.remove();
+  }
+  btn.textContent = "Copied";
+  setTimeout(() => btn.textContent = label, 1800);
+}
+$("copyPrompt").addEventListener("click", e => copyText($("promptText").textContent, e.target, "Copy prompt"));
+
+// Validation: inline text next to each field
+function setErr(id, msg) { $(id + "-err").textContent = msg; $(id).classList.add("invalid"); $(id).setAttribute("aria-invalid", "true"); }
+function clearErr(id) { $(id + "-err").textContent = ""; $(id).classList.remove("invalid"); $(id).removeAttribute("aria-invalid"); }
+["name","email","idea"].forEach(id => $(id).addEventListener("input", () => clearErr(id)));
+
+function validate() {
+  let first = null;
+  const bad = (id, m) => { setErr(id, m); first = first || $(id); };
+  const v = id => $(id).value.trim();
+  ["name","email","idea"].forEach(clearErr);
+  if (!v("name")) bad("name", "Please enter your name.");
+  if (!v("email")) bad("email", "Please enter your email so we can write back.");
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("email"))) bad("email", "This email does not look right. Check for a missing @ or dot.");
+  if (!v("idea")) bad("idea", "Tell us a little about what you want to build.");
+  if (first) first.focus();
+  return !first;
+}
+
+function data() {
+  return {
+    name: $("name").value.trim(), email: $("email").value.trim(), idea: $("idea").value.trim(),
+    timezone: tz, preferredTime: $("when").value, brief: $("brief").value.trim(),
+    company: $("company").value
+  };
+}
+
+function messageText(d) {
+  return [
+    "Name: " + d.name, "Email: " + d.email, "",
+    "What I want to build:", d.idea, "",
+    "Preferred meeting time: " + (d.preferredTime ? d.preferredTime + " (" + d.timezone + ")" : "not given"),
+    "", "Brief:", d.brief || "none"
+  ].join("\n");
+}
+
+function showFallback(d) {
+  const body = messageText(d);
+  $("mailFallback").href = "mailto:" + TO + "?subject=" + encodeURIComponent("A project for Orivane") + "&body=" + encodeURIComponent(body);
+  $("mailFallback").textContent = "Email " + TO;
+  $("copyMsg").onclick = e => copyText(body, e.target, "Copy message");
+  $("fallback").hidden = false;
+  send.disabled = false; send.textContent = "Send my request";
+}
+
+function showSuccess(d) {
+  const card = $("formCard");
+  card.innerHTML = "";
+  const w = document.createElement("div"); w.className = "done";
+  const h = document.createElement("h2"); h.textContent = "Request received";
+  const p = document.createElement("p");
+  p.append("Thanks, ");
+  p.append(d.name);
+  p.append(". We received your request and will email you at ");
+  const b = document.createElement("b"); b.textContent = d.email; p.append(b);
+  p.append(".");
+  w.append(h, p); card.append(w);
+}
+
+f.addEventListener("submit", async ev => {
+  ev.preventDefault();
+  $("fallback").hidden = true;
+  const d = data();
+  if (d.company) { showSuccess(d); return; }          // honeypot: pretend success, send nothing
+  if (!validate()) return;
+  send.disabled = true; send.textContent = "Sending...";
+  if (!FORM_ENDPOINT) { showFallback(d); return; }
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), TIMEOUT_MS);
+  try {
+    await fetch(FORM_ENDPOINT, { method: "POST", mode: "no-cors", signal: ctl.signal,
+      headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(d) });
+    clearTimeout(timer);
+    showSuccess(d);
+  } catch (e) {
+    clearTimeout(timer);
+    showFallback(d);
+  }
+});
+</script>
+</body>
+</html>
