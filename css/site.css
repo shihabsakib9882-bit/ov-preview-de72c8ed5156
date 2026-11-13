@@ -153,6 +153,7 @@ section{position:relative;overflow-x:clip;padding-block:var(--space-section)}
 .pimg.phone{max-width:300px;justify-self:center}
 .js-pin .pstage{position:relative;height:100vh;padding-top:84px}
 .js-pin .pscene{position:absolute;inset:84px 0 0 0;margin:0;display:grid;grid-template-columns:5fr 7fr;gap:4rem;align-items:center}
+.js-pin .pscene,.js-pin .pimg{pointer-events:none}
 .js-pin .pshots{display:block;position:relative;height:72vh;margin:0}
 .js-pin .pimg{position:absolute;margin:0;transform-style:preserve-3d;will-change:transform,opacity}
 .js-pin .pimg.phone{max-width:none;height:92%;aspect-ratio:750/1624}

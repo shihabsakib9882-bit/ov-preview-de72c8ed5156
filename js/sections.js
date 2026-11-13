@@ -63,7 +63,9 @@ function initSections(){
     var stage=document.getElementById('pstage'),scenes=gsap.utils.toArray('#pstage .pscene');
     stage.classList.add('js-pin');document.body.classList.add('js-pin');
     scenes.forEach(function(sc){gsap.set(sc.querySelectorAll('.pimg'),{opacity:0,transformPerspective:1600});gsap.set(sc.querySelector('.ptext'),{opacity:0})});
-    var tl=gsap.timeline({scrollTrigger:{trigger:stage,start:'top top',end:'+='+(scenes.length*100+40)+'%',scrub:.9,pin:true,anticipatePin:1,refreshPriority:1}});
+    /* the scenes are stacked on top of each other: only the scene whose text is visible may take clicks */
+    function updatePE(){scenes.forEach(function(sc){var t=sc.querySelector('.ptext');t.style.pointerEvents=(parseFloat(gsap.getProperty(t,'opacity'))>.5)?'auto':'none'})}
+    var tl=gsap.timeline({onUpdate:updatePE,scrollTrigger:{trigger:stage,start:'top top',end:'+='+(scenes.length*100+40)+'%',scrub:.9,pin:true,anticipatePin:1,refreshPriority:1}});
     scenes.forEach(function(sc,i){
       var t=i*2,imgs=sc.querySelectorAll('.pimg'),txt=sc.querySelector('.ptext');
       tl.fromTo(txt,{opacity:0,y:70},{opacity:1,y:0,duration:.7,ease:'power3.out'},t)
@@ -73,6 +75,7 @@ function initSections(){
           .to(imgs,{opacity:0,z:360,x:-300,rotationY:-32,duration:.6,ease:'power2.in',stagger:.07},t+1.45);
       }
     });
+    updatePE();
     /* scene i is fully on screen at timeline time i*2+1.1 */
     function sceneY(i){var st=tl.scrollTrigger;return st.start+(st.end-st.start)*((i*2+1.1)/tl.duration())}
     anchorY.proof=function(){return tl.scrollTrigger?sceneY(0):null};
