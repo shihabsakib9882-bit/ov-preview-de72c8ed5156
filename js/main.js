@@ -66,7 +66,7 @@
   var three=load('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js').then(function(){L.mark('three')});
   /* Printiq's real dashboard, cut into pieces for the build animation. If the browser will not let us read
      its pixels (for example opened as a file), skip it and the animation uses the drawn placeholder dashboard. */
-  var dash=new Promise(function(res){var im=new Image();im.onload=function(){try{var t=document.createElement('canvas');t.width=t.height=2;var x=t.getContext('2d');x.drawImage(im,0,0,2,2);x.getImageData(0,0,1,1);window.__dash=im}catch(e){}res()};im.onerror=function(){res()};im.src='assets/s-dashboard.webp'});
+  var dash=new Promise(function(res){var im=new Image();im.onload=function(){try{var t=document.createElement('canvas');t.width=t.height=2;var x=t.getContext('2d');x.drawImage(im,0,0,2,2);x.getImageData(0,0,1,1);window.__dash=im}catch(e){}res()};im.onerror=function(){res()};im.src='assets/s-dashboard.webp?v=20261114'});
   var gs=load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js').then(function(){return load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js')}).catch(function(){return null});
   var ln=load('https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js').catch(function(){return null});
 
