@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>DayExam, case study | Orivane</title>
-<meta name="description" content="DayExam: an exam-practice website, dashboard and app for a teacher with no technical background. 3.5K+ students enrolled.">
+<meta name="description" content="DayExam: an exam-prep platform, dashboard and app for a client with no technical background. 3.5K+ students enrolled.">
 <meta name="theme-color" content="#0A0B0D">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Orivane">
 <meta property="og:title" content="DayExam, case study | Orivane">
-<meta property="og:description" content="An exam-practice website, dashboard and app for SSC, HSC, BCS and admission tests. 3.5K+ students enrolled.">
+<meta property="og:description" content="An exam-prep platform, dashboard and app for SSC, HSC, BCS and admission tests. 3.5K+ students enrolled.">
 <meta property="og:image" content="../assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../favicon.ico" sizes="any">
@@ -139,13 +139,35 @@ footer.site a:hover{color:var(--color-text)}
 @media (max-width:560px){.facts{grid-template-columns:1fr}.stats3{grid-template-columns:1fr}.top .btn{padding:0 1rem}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
-/* added for DayExam and Portfolio pages */
-.notdone{padding:2rem 2.25rem}
-.notdone .eyebrow{display:block;margin-bottom:1rem}
-.notdone p{margin:0;font:600 clamp(1.125rem,1.7vw,1.5rem)/1.4 var(--font-display);letter-spacing:-.015em}
-.obs.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.big.after{margin-top:clamp(2.5rem,5vw,4rem)}
-@media (max-width:1100px){.obs.two{grid-template-columns:1fr}}
+/* case study layout in the portfolio template, in Orivane brand */
+.narrow{max-width:980px}
+.sec-head{display:flex;align-items:baseline;gap:1.25rem;margin-bottom:2rem}
+.sec-num{font:700 .875rem/1 var(--font-display);letter-spacing:.14em;color:var(--color-label)}
+.sec-title{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.05;letter-spacing:-.03em}
+.prose p{margin:0 0 1.25rem;font-size:clamp(1.125rem,1.5vw,1.3125rem);color:var(--color-text-muted);max-width:34em}
+.prose p:last-child{margin-bottom:0}
+.prose b{color:var(--color-text);font-weight:600}
+.bshot{border-radius:var(--radius);overflow:hidden;border:1px solid var(--glass-line);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 120px rgba(111,214,255,.1)}
+.bshot .bar{height:34px;display:flex;align-items:center;gap:6px;padding:0 14px;background:rgba(255,255,255,.06);border-bottom:1px solid var(--glass-line)}
+.bshot .bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28)}
+.bshot img{width:100%;height:auto;background:#fff}
+.shot-caption{margin-top:.875rem;color:var(--color-text-muted);font-size:.9375rem}
+.built-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-top:2.5rem}
+.built-list .item{padding:1.5rem 1.75rem}
+.built-list h4{margin:0 0 .5rem;font:700 1.25rem/1.2 var(--font-display);letter-spacing:-.01em}
+.built-list p{margin:0;color:var(--color-text-muted);font-size:1.0625rem}
+.pdfshot{margin-top:2.5rem;width:min(100%,520px)}
+.pdfshot .frame{background:#000}
+.wrong{margin-top:2.5rem;padding:2rem 2.25rem;background:rgba(111,214,255,.06);border-color:var(--glass-blue-line)}
+.wrong .eyebrow{color:var(--color-brand)}
+.wrong p{margin:1rem 0 0;color:var(--color-text-muted);font-size:1.0625rem;max-width:42em}
+.next{text-align:left;padding-block:clamp(3rem,6vw,5rem)}
+.next a.big-link{display:inline-flex;align-items:center;min-height:var(--hit);margin-top:1rem;font:800 clamp(2.25rem,6vw,5rem)/1 var(--font-display);letter-spacing:-.04em;text-decoration:none;border-bottom:3px solid var(--color-brand)}
+.next a.big-link:hover{color:var(--color-brand)}
+@media (max-width:900px){.built-list{grid-template-columns:1fr}}
+.quote{margin:0 0 2rem;padding-left:1.75rem;border-left:3px solid var(--color-brand)}
+.quote p{margin:0;font:600 clamp(1.375rem,2.4vw,2rem)/1.35 var(--font-display);letter-spacing:-.02em;max-width:26em;color:var(--color-text)}
+.hero h1.long{font-size:clamp(3.5rem,12vw,13rem)}
 </style>
 </head>
 <body>
@@ -172,97 +194,97 @@ footer.site a:hover{color:var(--color-text)}
     <a class="back" href="./">&larr; All work</a>
     <span class="eyebrow">Case study &middot; Client work</span>
     <h1>DayExam</h1>
-    <p class="lead">An exam-practice website for SSC, HSC, BCS and admission tests, built for a teacher who knows teaching, not software.</p>
+    <p class="lead">An exam-prep platform for SSC, HSC, BCS and admission tests, built for a client with no technical background who handed me the whole decision space.</p>
     <dl class="facts">
       <div><dt>Client</dt><dd>A teacher with no technical background</dd></div>
-      <div><dt>Our role</dt><dd>Product and UX design, solo</dd></div>
-      <div><dt>Platform</dt><dd>Website, admin dashboard and mobile app</dd></div>
-      <div><dt>Enrolled</dt><dd>3.5K+ students</dd></div>
+      <div><dt>My role</dt><dd>Product and UX design, solo</dd></div>
+      <div><dt>Built</dt><dd>Web, then admin dashboard, then mobile app</dd></div>
+      <div><dt>Status</dt><dd>Live &middot; 3.5K+ students enrolled</dd></div>
     </dl>
-    <div class="heroshot"><div class="frame"><img src="../assets/shot-dayexam-home-1280.webp" width="1280" height="800" alt="The DayExam home page for guardians and students"></div></div>
+    <div class="heroshot"><div class="bshot"><div class="bar"><i></i><i></i><i></i></div><img src="../assets/shot-dayexam-1280.webp" width="1280" height="800" alt="The DayExam exam listing page"></div></div>
   </div>
 </section>
 
-<!-- Problem -->
 <section>
-  <div class="wrap">
-    <span class="eyebrow label-row">01 / The problem</span>
-    <p class="big">The client knows teaching, not software. <span>He wanted one place where students and guardians log in, buy courses or exams, and sit tests. Research, decisions and testing were left to us. He approved or rejected at the end.</span></p>
-  </div>
-</section>
-
-<!-- Found -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow label-row">02 / What we found</span>
-    <p class="big">Two things. <span>One about the people, one about our own first draft.</span></p>
-    <ul class="obs two">
-      <li class="glass"><b>01</b>A guardian and a student are not two user types. One person moves between both roles, sometimes for different exams.</li>
-      <li class="glass"><b>02</b>The first AI-made payment flow stopped at &ldquo;select course, pay&rdquo;. It had no &ldquo;my exams&rdquo; view, no result history, and no answer on retakes.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Decisions -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow label-row">03 / The decisions</span>
-    <p class="big">Five calls we made with the client. <span>Each one with a reason, and what we did not do.</span></p>
-
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">01</span><h3>One login for both roles.</h3>
-        <p><b>Reason:</b> a parent can buy a course for a child and sit their own exam (BCS, bank job) without two accounts.</p></div>
-      <div class="notdone glass"><span class="eyebrow">Not done</span><p>separate guardian and student accounts.</p></div>
-    </article>
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">02</span><h3>bKash and card, both.</h3>
-        <p><b>Reason:</b> the business is fully online. bKash covers most student users, card covers the rest.</p></div>
-      <div class="notdone glass"><span class="eyebrow">Not done</span><p>a cash option.</p></div>
-    </article>
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">03</span><h3>MCQs score themselves. Written answers go to a teacher.</h3>
-        <p><b>Reason:</b> wrong-answer deductions are automatic, and written sections go to the teacher who set them.</p></div>
-      <div class="notdone glass"><span class="eyebrow">Not done</span><p>AI grading, even when the client asked. The budget did not cover it, and a wrong auto-grade on a real exam is worse than a slow one.</p></div>
-    </article>
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">04</span><h3>A flow drawn by hand.</h3>
-        <p><b>Reason:</b> AI's first flow treated &ldquo;buy a course&rdquo; as the end. We rewrote it by hand seven times, then handed AI a finished flow and a token system.</p></div>
-      <div class="notdone glass"><span class="eyebrow">Not done</span><p>asking AI for flows again.</p></div>
-    </article>
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">05</span><h3>Ask for the retake rule.</h3>
-        <p><b>Reason:</b> we asked instead of guessing: you have already paid once, so a retake is free.</p></div>
-      <div class="notdone glass"><span class="eyebrow">Not done</span><p>inventing a rule.</p></div>
-    </article>
-  </div>
-</section>
-
-<!-- Result -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow label-row">04 / The result</span>
-    <p class="big">Facts only. <span>No invented numbers.</span></p>
-    <div class="res">
-      <div class="glass"><b>Live</b><p>On web and on the app, at dayexam.com.</p></div>
-      <div class="glass"><b>3.5K+ enrolled</b><p>Students who have signed up so far.</p></div>
-      <div class="glass"><b>Three surfaces</b><p>Website, dashboard and app. The client approved the dashboard, then the app, after seeing the web version work.</p></div>
-    </div>
-    <p class="big after">What we got wrong. <span>Our first flow ended at &ldquo;purchase complete&rdquo;. The dev team caught it when building. We fixed it by documenting the flow first, then handing over visual design, tokens and a guideline.</span></p>
-  </div>
-</section>
-
-<!-- Screens -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow label-row">05 / Screens</span>
-    <div class="gal">
-      <figure><div class="frame"><img loading="lazy" src="../assets/shot-dayexam-home-1280.webp" width="1280" height="800" alt="The DayExam home page"></div><figcaption>The home page, for guardians and students.</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="../assets/shot-dayexam-1280.webp" width="1280" height="800" alt="DayExam exam finder with search and filters"></div><figcaption>Search and filter exams.</figcaption></figure>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">The brief</h2></div>
+    <blockquote class="quote"><p>&ldquo;I only know teaching. You know website, app, and dashboard design &mdash; you decide what&rsquo;s right.&rdquo;</p></blockquote>
+    <div class="prose">
+      <p>The client was a teacher, not a technical person. He wanted one thing: a place where students and guardians could log in, buy courses or exams, and take tests. Beyond that, he left research, decisions and testing to me. His only role was to <b>approve or reject at the end</b>.</p>
     </div>
   </div>
 </section>
 
-<!-- Not shown yet (add when Shihab supplies them): tools used, start and finish dates, launch year, role-switch / payment / dashboard / app screens, "what is next", the client's own words. Never invent them. -->
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Directing AI, and what I built</h2></div>
+    <div class="prose">
+      <p>I did the market research myself: how Bangladeshi students and guardians behave, what they trust, what puts them off. Then I fed it to AI to cross-check and fill gaps, judging the output as a Bangladeshi user, not just as a designer.</p>
+      <p>AI&rsquo;s first flow ideas were wrong. I rewrote the core flow by hand <b>seven times</b> before it held. Then I stopped asking AI for flows and started drawing them myself, handing AI a finished flow and a token system to build from.</p>
+    </div>
+    <div class="built-list">
+      <div class="item glass"><h4>Role-flexible accounts</h4><p>One login moves between guardian and student. A parent can buy a course for their child and separately sit their own exam (BCS, bank job) without two accounts.</p></div>
+      <div class="item glass"><h4>bKash and card, both</h4><p>A fully online business with no cash option. bKash covers most student users, card covers the rest.</p></div>
+      <div class="item glass"><h4>Split grading</h4><p>MCQs auto-score with wrong-answer deductions. Written sections are graded by hand by the assigned teacher. No AI grading, since the client&rsquo;s budget did not cover it.</p></div>
+      <div class="item glass"><h4>Web, dashboard, app</h4><p>The website first, then a client-requested admin dashboard, then a mobile app once he saw the responsive web version working. One design system across all three.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure><div class="bshot"><div class="bar"><i></i><i></i><i></i></div><img loading="lazy" src="../assets/shot-dayexam-home-1280.webp" width="1280" height="800" alt="The DayExam home page"></div><figcaption class="shot-caption">The home page: the entry point for both guardians and students.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">The real problem</h2></div>
+    <div class="prose">
+      <p>&ldquo;Let people buy and take exams&rdquo; was hiding three unresolved shapes.</p>
+      <p><b>First, the account model.</b> A guardian and a student are not two user types. They are roles one person moves between, sometimes for different exams at different levels.</p>
+      <p><b>Second, the payment flow.</b> AI&rsquo;s version stopped at &ldquo;select course, pay&rdquo;. It had no &ldquo;my exams&rdquo; view, no result history, and no answer on whether a retake is free. I asked the client directly and got the real business rule: you have already paid once, so a retake is free. I did not guess.</p>
+      <p><b>Third, the grading split.</b> Written answers had to go to the same teacher who set the question, given the budget.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">What I rejected</h2></div>
+    <div class="prose">
+      <p>I rejected AI&rsquo;s first flow outright and rebuilt it by hand across seven revisions. It kept treating &ldquo;buy a course&rdquo; as the end of the flow, not the start of the exam-taking journey.</p>
+      <p>I also rejected letting AI touch grading, even after the client himself asked whether AI could summarise written answers. There was no budget for the integration, and <b>a wrong auto-grade on a real exam is worse than a slower manual one</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Outcome</h2></div>
+    <div class="prose">
+      <p>Live at dayexam.com, on web and on the app. The client was satisfied enough to green-light the dashboard, then the app.</p>
+    </div>
+    <div class="stats3" style="margin-top:2.5rem">
+      <div class="glass"><b>3.5K+</b><span>students enrolled</span></div>
+      <div class="glass"><b>3</b><span>surfaces shipped: web, dashboard, app</span></div>
+      <div class="glass"><b>7</b><span>hand-rewritten flow revisions</span></div>
+    </div>
+    <div class="wrong glass">
+      <span class="eyebrow">What I got wrong</span>
+      <p>My first flow draft ended at &ldquo;purchase complete&rdquo;. I had not designed what happens right after someone buys: where they land and how they get into the exam. The external dev team caught it when they tried to build it and asked me directly. I fixed it by documenting the flow properly first, then handing over visual design, tokens and a guideline, across several rounds of meetings with a dev team I did not manage.</p>
+    </div>
+  </div>
+</section>
+<!-- Not shown yet (add when Shihab supplies them): launch year and dates, role-switch / payment / dashboard / app screens. Never invent them. -->
+
+<!-- Next -->
+<section class="next">
+  <div class="wrap">
+    <span class="eyebrow label-row">Next case study</span>
+    <a class="big-link" href="portfolio-site.html">Portfolio &rarr;</a>
+  </div>
+</section>
 
 <!-- CTA -->
 <section class="cta">
@@ -302,15 +324,9 @@ footer.site a:hover{color:var(--color-text)}
     var gsap=window.gsap,ST=window.ScrollTrigger;gsap.registerPlugin(ST);
     gsap.from('.hero h1',{yPercent:30,opacity:0,duration:1.1,ease:'power4.out',delay:.1});
     gsap.from('.hero .lead, .facts div',{y:30,opacity:0,duration:.9,ease:'power3.out',stagger:.08,delay:.35});
-    gsap.fromTo('.heroshot .frame',{y:90,rotationX:14,scale:.94,opacity:0,transformPerspective:1600},{y:0,rotationX:0,scale:1,opacity:1,duration:1.4,ease:'power4.out',delay:.5});
-    gsap.utils.toArray('.big, .before-grid figure, .obs li, .res .glass, .gal figure, .review, .cta h2, .cta .row').forEach(function(el){
+    gsap.fromTo('.heroshot .bshot',{y:90,rotationX:14,scale:.94,opacity:0,transformPerspective:1600},{y:0,rotationX:0,scale:1,opacity:1,duration:1.4,ease:'power4.out',delay:.5});
+    gsap.utils.toArray('.sec-head, .quote, .prose, .built-list .item, .gal .bshot, .before-grid figure, .pdfshot, .stats3 .glass, .wrong, .next .big-link, .cta h2, .cta .row').forEach(function(el){
       gsap.from(el,{y:60,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none reverse'}});
-    });
-    gsap.utils.toArray('.dec').forEach(function(d){
-      var num=d.querySelector('.num');
-      gsap.from(d.querySelectorAll('h3, p'),{y:40,opacity:0,duration:.9,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:d,start:'top 78%',toggleActions:'play none none reverse'}});
-      gsap.from(d.querySelector('.frame, .stats3, .notdone'),{y:80,rotationX:10,opacity:0,transformPerspective:1600,duration:1.2,ease:'power4.out',scrollTrigger:{trigger:d,start:'top 78%',toggleActions:'play none none reverse'}});
-      gsap.fromTo(num,{'--fill':0},{'--fill':100,ease:'none',scrollTrigger:{trigger:d,start:'top 70%',end:'top 20%',scrub:.6}});
     });
     setTimeout(function(){ST.refresh()},800);
   }

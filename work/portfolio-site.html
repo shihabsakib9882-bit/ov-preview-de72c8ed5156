@@ -139,14 +139,35 @@ footer.site a:hover{color:var(--color-text)}
 @media (max-width:560px){.facts{grid-template-columns:1fr}.stats3{grid-template-columns:1fr}.top .btn{padding:0 1rem}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
-/* added for DayExam and Portfolio pages */
-.notdone{padding:2rem 2.25rem}
-.notdone .eyebrow{display:block;margin-bottom:1rem}
-.notdone p{margin:0;font:600 clamp(1.125rem,1.7vw,1.5rem)/1.4 var(--font-display);letter-spacing:-.015em}
-.obs.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.big.after{margin-top:clamp(2.5rem,5vw,4rem)}
-@media (max-width:1100px){.obs.two{grid-template-columns:1fr}}
-.hero h1{font-size:clamp(3.5rem,12vw,13rem)}
+/* case study layout in the portfolio template, in Orivane brand */
+.narrow{max-width:980px}
+.sec-head{display:flex;align-items:baseline;gap:1.25rem;margin-bottom:2rem}
+.sec-num{font:700 .875rem/1 var(--font-display);letter-spacing:.14em;color:var(--color-label)}
+.sec-title{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.05;letter-spacing:-.03em}
+.prose p{margin:0 0 1.25rem;font-size:clamp(1.125rem,1.5vw,1.3125rem);color:var(--color-text-muted);max-width:34em}
+.prose p:last-child{margin-bottom:0}
+.prose b{color:var(--color-text);font-weight:600}
+.bshot{border-radius:var(--radius);overflow:hidden;border:1px solid var(--glass-line);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 120px rgba(111,214,255,.1)}
+.bshot .bar{height:34px;display:flex;align-items:center;gap:6px;padding:0 14px;background:rgba(255,255,255,.06);border-bottom:1px solid var(--glass-line)}
+.bshot .bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28)}
+.bshot img{width:100%;height:auto;background:#fff}
+.shot-caption{margin-top:.875rem;color:var(--color-text-muted);font-size:.9375rem}
+.built-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-top:2.5rem}
+.built-list .item{padding:1.5rem 1.75rem}
+.built-list h4{margin:0 0 .5rem;font:700 1.25rem/1.2 var(--font-display);letter-spacing:-.01em}
+.built-list p{margin:0;color:var(--color-text-muted);font-size:1.0625rem}
+.pdfshot{margin-top:2.5rem;width:min(100%,520px)}
+.pdfshot .frame{background:#000}
+.wrong{margin-top:2.5rem;padding:2rem 2.25rem;background:rgba(111,214,255,.06);border-color:var(--glass-blue-line)}
+.wrong .eyebrow{color:var(--color-brand)}
+.wrong p{margin:1rem 0 0;color:var(--color-text-muted);font-size:1.0625rem;max-width:42em}
+.next{text-align:left;padding-block:clamp(3rem,6vw,5rem)}
+.next a.big-link{display:inline-flex;align-items:center;min-height:var(--hit);margin-top:1rem;font:800 clamp(2.25rem,6vw,5rem)/1 var(--font-display);letter-spacing:-.04em;text-decoration:none;border-bottom:3px solid var(--color-brand)}
+.next a.big-link:hover{color:var(--color-brand)}
+@media (max-width:900px){.built-list{grid-template-columns:1fr}}
+.quote{margin:0 0 2rem;padding-left:1.75rem;border-left:3px solid var(--color-brand)}
+.quote p{margin:0;font:600 clamp(1.375rem,2.4vw,2rem)/1.35 var(--font-display);letter-spacing:-.02em;max-width:26em;color:var(--color-text)}
+.hero h1.long{font-size:clamp(3.5rem,12vw,13rem)}
 </style>
 </head>
 <body>
@@ -172,90 +193,96 @@ footer.site a:hover{color:var(--color-text)}
   <div class="wrap">
     <a class="back" href="./">&larr; All work</a>
     <span class="eyebrow">Case study &middot; Own project</span>
-    <h1>Portfolio</h1>
-    <p class="lead">A story-first portfolio for a product designer. I was my own client, and this is how I briefed myself.</p>
+    <h1 class="long">Portfolio</h1>
+    <p class="lead">A story-first portfolio website for a product designer. I was my own client, and this is how I briefed myself.</p>
     <dl class="facts">
       <div><dt>Client</dt><dd>Me. I wrote the brief, approved the work and carried the cost.</dd></div>
       <div><dt>My role</dt><dd>Strategy, design and build</dd></div>
       <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, GitHub, Netlify, Google Analytics 4</dd></div>
-      <div><dt>Year</dt><dd>2026</dd></div>
+      <div><dt>Status</dt><dd>Live &middot; 2026</dd></div>
     </dl>
-    <div class="heroshot"><div class="frame"><img src="../assets/portfolio-home-1280.webp" width="1280" height="720" alt="The home page of the portfolio website"></div></div>
+    <div class="heroshot"><div class="bshot"><div class="bar"><i></i><i></i><i></i></div><img src="../assets/portfolio-home-1280.webp" width="1280" height="720" alt="The home page of the portfolio website"></div></div>
   </div>
 </section>
 
-<!-- Problem -->
 <section>
-  <div class="wrap">
-    <span class="eyebrow label-row">01 / The problem</span>
-    <p class="big">Two kinds of visitor arrive from a shared link: a recruiter and a freelance client. <span>Neither searches for me. The recruiter has other portfolios open and decides quickly. The first screen has to work with no context.</span></p>
-  </div>
-</section>
-
-<!-- Found -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow label-row">02 / What I found</span>
-    <p class="big">My first draft read like a company website. <span>Then it read like a resume: text and one stock photo, no real product screens. Both were wrong for a portfolio.</span></p>
-  </div>
-</section>
-
-<!-- Decisions -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow label-row">03 / The decisions</span>
-    <p class="big">Four calls I made as my own client. <span>Each one with a reason, and what I did not do.</span></p>
-
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">01</span><h3>Story first.</h3>
-        <p><b>Reason:</b> a list of projects looks like every other portfolio. The home page opens with where I came from (fifteen years of guitar, then design), and moves on to the work.</p>
-        <p><b>Not done:</b> a plain index of projects.</p></div>
-      <div class="shot"><div class="frame"><img loading="lazy" src="../assets/portfolio-home-1280.webp" width="1280" height="720" alt="Portfolio home page, opening with the story"></div></div>
-    </article>
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">02</span><h3>Dark, editorial, one accent.</h3>
-        <p><b>Reason:</b> near-black, warm off-white, one lime accent, two font families, no gradient blobs, no glass.</p></div>
-      <div class="notdone glass"><span class="eyebrow">Not done</span><p>the animated blobs and marquee from my second draft.</p></div>
-    </article>
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">03</span><h3>Real screens, not live embeds.</h3>
-        <p><b>Reason:</b> live iframes broke at some window widths and made the page heavy. Local screenshots replaced them.</p>
-        <p><b>Not done:</b> stock images.</p></div>
-      <div class="shot"><div class="frame"><img loading="lazy" src="../assets/portfolio-work-1280.webp" width="1280" height="720" alt="Portfolio Work archive with real project screens"></div></div>
-    </article>
-    <article class="dec">
-      <div><span class="num" aria-hidden="true">04</span><h3>A cold first screen.</h3>
-        <p><b>Reason:</b> I added a line under my name with the shipped proof.</p></div>
-      <div class="notdone glass"><span class="eyebrow">Not done</span><p>a generic &ldquo;UI/UX designer&rdquo; hero.</p></div>
-    </article>
-  </div>
-</section>
-
-<!-- Result -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow label-row">04 / The result</span>
-    <p class="big">Facts only. <span>No invented numbers.</span></p>
-    <div class="res">
-      <div class="glass"><b>Live</b><p>A home page, a Work archive and case study pages. Analytics runs on every page.</p></div>
-      <div class="glass"><b>Fixed by testing</b><p>Unreadable nav text over big headlines, a placeholder WhatsApp link, and an unverified &ldquo;700+ users&rdquo; figure, replaced with the live &ldquo;3.5K+ students enrolled&rdquo;.</p></div>
-      <div class="glass"><b>Calm motion</b><p>150ms hovers and 250ms reveals. Nothing slower.</p></div>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">The brief</h2></div>
+    <div class="prose">
+      <p>Two kinds of visitor arrive from a shared link: <b>a recruiter and a freelance client</b>. Neither searches for me. The recruiter has other portfolios open and decides quickly. The first screen has to work with no context.</p>
     </div>
   </div>
 </section>
 
-<!-- Screens -->
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">What I built</h2></div>
+    <div class="prose">
+      <p>Four calls I made as my own client, each with a reason.</p>
+    </div>
+    <div class="built-list">
+      <div class="item glass"><h4>Story first</h4><p>A list of projects looks like every other portfolio. The home page opens with where I came from (fifteen years of guitar, then design) and moves on to the work.</p></div>
+      <div class="item glass"><h4>Dark, editorial, one accent</h4><p>Near-black, warm off-white, one lime accent, two font families. No gradient blobs, no glass.</p></div>
+      <div class="item glass"><h4>Real screens, not live embeds</h4><p>Live iframes broke at some window widths and made the page heavy. Local screenshots replaced them.</p></div>
+      <div class="item glass"><h4>A cold first screen</h4><p>I added a line under my name with the shipped proof, so a stranger sees evidence first.</p></div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
-    <span class="eyebrow label-row">05 / Screens</span>
     <div class="gal">
-      <figure><div class="frame"><img loading="lazy" src="../assets/portfolio-work-1280.webp" width="1280" height="720" alt="The Work archive"></div><figcaption>The Work archive.</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="../assets/portfolio-case-1280.webp" width="1280" height="720" alt="A case study page"></div><figcaption>A case study page.</figcaption></figure>
+      <figure><div class="bshot"><div class="bar"><i></i><i></i><i></i></div><img loading="lazy" src="../assets/portfolio-work-1280.webp" width="1280" height="720" alt="The Work archive"></div><figcaption class="shot-caption">The Work archive.</figcaption></figure>
+      <figure><div class="bshot"><div class="bar"><i></i><i></i><i></i></div><img loading="lazy" src="../assets/portfolio-case-1280.webp" width="1280" height="720" alt="A case study page"></div><figcaption class="shot-caption">A case study page.</figcaption></figure>
     </div>
   </div>
 </section>
 
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">The real problem</h2></div>
+    <div class="prose">
+      <p>My first draft read like a company website. Then it read like a resume: text and one stock photo, no real product screens. <b>Both were wrong for a portfolio.</b></p>
+      <p>A portfolio has one job: let a stranger see real work and decide fast.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">What I rejected</h2></div>
+    <div class="prose">
+      <p>The animated blobs and marquee from my second draft. Live embeds. Stock images. A plain index of projects. A generic &ldquo;UI/UX designer&rdquo; hero.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Outcome</h2></div>
+    <div class="prose">
+      <p>A live site with a home page, a Work archive and case study pages. Analytics runs on every page.</p>
+    </div>
+    <div class="stats3" style="margin-top:2.5rem">
+      <div class="glass"><b>150ms</b><span>hover motion</span></div>
+      <div class="glass"><b>250ms</b><span>reveals</span></div>
+      <div class="glass"><b>3</b><span>page types: home, Work archive, case studies</span></div>
+    </div>
+    <div class="wrong glass">
+      <span class="eyebrow">What I got wrong</span>
+      <p>Testing found three mistakes of mine: unreadable nav text over big headlines, a placeholder WhatsApp link, and a &ldquo;700+ users&rdquo; figure I had not verified. I replaced it with the live &ldquo;3.5K+ students enrolled&rdquo;.</p>
+    </div>
+  </div>
+</section>
 <!-- Not shown yet (add when Shihab supplies them): launch date and total time, visitor or enquiry numbers, story-section and 375px mobile captures, custom domain status. Never invent them. -->
+
+<!-- Next -->
+<section class="next">
+  <div class="wrap">
+    <span class="eyebrow label-row">Next case study</span>
+    <a class="big-link" href="printiq.html">Printiq &rarr;</a>
+  </div>
+</section>
 
 <!-- CTA -->
 <section class="cta">
@@ -295,15 +322,9 @@ footer.site a:hover{color:var(--color-text)}
     var gsap=window.gsap,ST=window.ScrollTrigger;gsap.registerPlugin(ST);
     gsap.from('.hero h1',{yPercent:30,opacity:0,duration:1.1,ease:'power4.out',delay:.1});
     gsap.from('.hero .lead, .facts div',{y:30,opacity:0,duration:.9,ease:'power3.out',stagger:.08,delay:.35});
-    gsap.fromTo('.heroshot .frame',{y:90,rotationX:14,scale:.94,opacity:0,transformPerspective:1600},{y:0,rotationX:0,scale:1,opacity:1,duration:1.4,ease:'power4.out',delay:.5});
-    gsap.utils.toArray('.big, .before-grid figure, .obs li, .res .glass, .gal figure, .review, .cta h2, .cta .row').forEach(function(el){
+    gsap.fromTo('.heroshot .bshot',{y:90,rotationX:14,scale:.94,opacity:0,transformPerspective:1600},{y:0,rotationX:0,scale:1,opacity:1,duration:1.4,ease:'power4.out',delay:.5});
+    gsap.utils.toArray('.sec-head, .quote, .prose, .built-list .item, .gal .bshot, .before-grid figure, .pdfshot, .stats3 .glass, .wrong, .next .big-link, .cta h2, .cta .row').forEach(function(el){
       gsap.from(el,{y:60,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none reverse'}});
-    });
-    gsap.utils.toArray('.dec').forEach(function(d){
-      var num=d.querySelector('.num');
-      gsap.from(d.querySelectorAll('h3, p'),{y:40,opacity:0,duration:.9,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:d,start:'top 78%',toggleActions:'play none none reverse'}});
-      gsap.from(d.querySelector('.frame, .stats3, .notdone'),{y:80,rotationX:10,opacity:0,transformPerspective:1600,duration:1.2,ease:'power4.out',scrollTrigger:{trigger:d,start:'top 78%',toggleActions:'play none none reverse'}});
-      gsap.fromTo(num,{'--fill':0},{'--fill':100,ease:'none',scrollTrigger:{trigger:d,start:'top 70%',end:'top 20%',scrub:.6}});
     });
     setTimeout(function(){ST.refresh()},800);
   }
